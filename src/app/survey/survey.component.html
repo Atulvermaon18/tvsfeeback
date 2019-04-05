@@ -1,0 +1,19 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" opened style="background: #f6931e;">
+    <mat-list>
+      <mat-list-item *ngFor="let folder of folders" class="menuItem" routerLink="/SurveyResult/{{folder.name}}">
+
+        <mat-icon mat-list-icon>{{folder.icon}}</mat-icon>
+        <h4 mat-line>{{folder.name}}</h4>
+        <p mat-line> {{folder.updated}} </p>
+
+
+        <mat-divider></mat-divider>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

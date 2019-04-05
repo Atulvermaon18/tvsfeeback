@@ -1,0 +1,26 @@
+<!-- <mat-card class="example-card"> -->
+<mat-card-header>
+  <div mat-card-avatar class="example-header-image"></div>
+  <mat-card-title>Mr. {{data.fb_name}}</mat-card-title>
+  <mat-card-subtitle>Employee ID.: {{data.fb_empID}}</mat-card-subtitle>
+  <mat-card-subtitle>Phone: {{data.fb_phone}}</mat-card-subtitle>
+</mat-card-header>
+<!-- <mat-card-content> -->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Questions Asked</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let question of data | keyvalue">
+      <td *ngIf="qsn[question.key]"> {{qsn[question.key]}}</td>
+      <td *ngIf="qsn[question.key]"> {{rating[question.value]}}</td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <strong>Comments :</strong> {{data.suggestionShare}}
+</div>
+<i class="material-icons print" (click)="printReport(item.key)">print</i>

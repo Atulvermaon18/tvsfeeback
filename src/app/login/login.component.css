@@ -1,0 +1,14 @@
+.example-card {
+    /* max-width: 500px; */
+    background:#faf7f4;
+  }
+  
+  .example-header-image {
+    background-image: url('/assets/img/rooms-min.jpg');
+    background-size: cover;
+  }
+
+  .conference-header-image {
+    background-image: url('/assets/img/conference-min.jpg');
+    background-size: cover;
+  }

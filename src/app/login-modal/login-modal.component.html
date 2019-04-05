@@ -1,0 +1,41 @@
+<!-- <mat-card> -->
+<mat-card-header *ngIf="!forgotPwdScreen">
+  <div mat-card-avatar class="login-header-image"></div>
+  <mat-card-title>Admin Login</mat-card-title>
+</mat-card-header>
+<mat-card-header *ngIf="forgotPwdScreen">
+  <div mat-card-avatar class="login-header-image"></div>
+  <mat-card-title>Forgot Password</mat-card-title>
+  <mat-card-subtitle>Enter your username, Your password will be send to your email.</mat-card-subtitle>
+</mat-card-header>
+<form [formGroup]="feedbackForm">
+  <mat-card-content>
+    <mat-form-field style="width:100%">
+      <input matInput placeholder="Admin" formControlName="username" required>
+    </mat-form-field>
+
+    <mat-form-field style="width:100%" *ngIf="!forgotPwdScreen">
+      <input matInput type="password" placeholder="Password" formControlName="password" required>
+    </mat-form-field>
+  </mat-card-content>
+  <div *ngIf="errors" style="color:red;">
+    {{errors.message}}
+  </div>
+  <div *ngIf="forgotPwdScreen">
+
+  </div>
+  <button mat-button color="primary" (click)="forgotPwd()" *ngIf="!forgotPwdScreen">Forgot password?</button>
+  <mat-card-actions style="margin-left:50%;">
+    <button mat-raised-button color="primary" *ngIf="!forgotPwdScreen">
+      Cancel
+    </button>
+    <button mat-raised-button color="primary" (click)="submit()" *ngIf="!forgotPwdScreen">
+      Login
+    </button>
+    <button mat-raised-button color="primary" (click)="sendPassword()" *ngIf="forgotPwdScreen">
+      Send
+    </button>
+
+  </mat-card-actions>
+</form>
+<!-- </mat-card> -->

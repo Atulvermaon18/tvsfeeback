@@ -1,0 +1,400 @@
+{
+    "data": [
+        {
+            "topic": "Front Office Staff",
+            "ques": "Reception",
+            "isChecked": true,
+            "isMandatory": true,
+            "icon": "resp-min.jpg",
+            "questions": [
+                {
+                    "ques": "Were you promptly greeted with smiles",
+                    "feedBackFor": "fo_smileGreet"
+                },
+                {
+                    "ques": "Arrival experience",
+                    "feedBackFor": "fo_arrivalExp"
+                },
+                {
+                    "ques": "Were reservation made according to your preferences and requirements",
+                    "feedBackFor": "fo_reservationExp"
+                },
+                {
+                    "ques": "Departure experience",
+                    "feedBackFor": "fo_departureExp"
+                },
+                {
+                    "ques": "Billing and accuracy",
+                    "feedBackFor": "fo_billingExp"
+                }
+            ]
+        },
+        {
+            "topic": "Room",
+            "ques": "Room",
+            "isChecked": true,
+            "isMandatory": true,
+            "icon": "rooms-min.jpg",
+            "questions": [
+                {
+                    "ques": "Cleanliness and tidiness of your room upon check-In",
+                    "feedBackFor": "room_Cleanliness"
+                },
+                {
+                    "ques": "Comfort level of bed",
+                    "feedBackFor": "room_bedComfort"
+                },
+                {
+                    "ques": "Was eveything in your room organised and easily accessible",
+                    "feedBackFor": "room_organised"
+                },
+                {
+                    "ques": "Overall room experience",
+                    "feedBackFor": "room_overall"
+                }
+            ]
+        },
+        {
+            "topic": "Restaurant",
+            "ques": "Mosaic Restaurant",
+            "isChecked": false,
+            "isMandatory": false,
+            "icon": "mosaic-min.jpg",
+            "questions": [
+                {
+                    "ques": "Ambiance of Restaurant",
+                    "feedBackFor": "resturant_ambiance"
+                },
+                {
+                    "ques": "Menu Selection",
+                    "feedBackFor": "resturant_menuSelection"
+                },
+                {
+                    "ques": "Food Quality & Presentation",
+                    "feedBackFor": "resturant_foodQuality"
+                },
+                {
+                    "ques": "Quantity of Food",
+                    "feedBackFor": "resturant_foodQuantity"
+                },
+                {
+                    "ques": "Overall Service Quality",
+                    "feedBackFor": "resturant_overallService"
+                },
+                {
+                    "ques": "Order Accuracy",
+                    "feedBackFor": "resturant_orderAccuracy"
+                },
+                {
+                    "ques": "Speed of Service",
+                    "feedBackFor": "resturant_serviceSpeed"
+                },
+                {
+                    "ques": "Billing Accuracy",
+                    "feedBackFor": "resturant_billingAccuracy"
+                },
+                {
+                    "ques": "Attitude of Staff",
+                    "feedBackFor": "resturant_staffAttitude"
+                },
+                {
+                    "ques": "Value for Money",
+                    "feedBackFor": "resturant_ValueForMoney"
+                },
+                {
+                    "ques": "Overall Experience",
+                    "feedBackFor": "resturant_OverallExp"
+                }
+            ]
+        },
+        {
+            "topic": "Bar",
+            "ques": "The Terrace Bar",
+            "icon": "bar-min.jpg",
+            "isChecked": false,
+            "isMandatory": false,
+            "questions": [
+                {
+                    "ques": "Ambiance of The Terrace Bar",
+                    "feedBackFor": "bar_ambiance"
+                },
+                {
+                    "ques": "Menu Selection",
+                    "feedBackFor": "bar_menuSelection"
+                },
+                {
+                    "ques": "Food Quality & Presentation",
+                    "feedBackFor": "bar_foodQuality"
+                },
+                {
+                    "ques": "Quantity of Food",
+                    "feedBackFor": "bar_foodQuantity"
+                },
+                {
+                    "ques": "Overall Service Quality",
+                    "feedBackFor": "bar_overallService"
+                },
+                {
+                    "ques": "Order Accuracy",
+                    "feedBackFor": "bar_orderAccuracy"
+                },
+                {
+                    "ques": "Speed of Service",
+                    "feedBackFor": "bar_serviceSpeed"
+                },
+                {
+                    "ques": "Billing Accuracy",
+                    "feedBackFor": "bar_billingAccuracy"
+                },
+                {
+                    "ques": "Attitude of Staff",
+                    "feedBackFor": "bar_staffAttitude"
+                },
+                {
+                    "ques": "Value for money",
+                    "feedBackFor": "bar_valueForMoney"
+                },
+                {
+                    "ques": "Overall Experience",
+                    "feedBackFor": "bar_overAll"
+                }
+            ]
+        },
+        {
+            "topic": "In room dinning",
+            "ques": "In-Room Dinning",
+            "icon": "inroom-min.jpg",
+            "isChecked": false,
+            "isMandatory": false,
+            "feedBackFor": "fb_infood",
+            "questions": [
+                {
+                    "ques": "Menu Selection",
+                    "feedBackFor": "inroom_menuSelection"
+                },
+                {
+                    "ques": "Food Quality & Presentation",
+                    "feedBackFor": "inroom_foodQuality"
+                },
+                {
+                    "ques": "Quantity of Food",
+                    "feedBackFor": "inroom_foodQuantity"
+                },
+                {
+                    "ques": "Overall Service Quality",
+                    "feedBackFor": "inroom_overAllServiceQuality"
+                },
+                {
+                    "ques": "Order Accuracy",
+                    "feedBackFor": "inroom_overAccuracy"
+                },
+                {
+                    "ques": "Speed of Service",
+                    "feedBackFor": "inroom_serviceSpeed"
+                },
+                {
+                    "ques": "Billing Accuracy",
+                    "feedBackFor": "inroom_billingAccuracy"
+                },
+                {
+                    "ques": "Attitude of Staff",
+                    "feedBackFor": "inroom_staffAttitude"
+                },
+                {
+                    "ques": "Value for Money",
+                    "feedBackFor": "inroom_valueForMoney"
+                },
+                {
+                    "ques": "Overall Experience",
+                    "feedBackFor": "inroom_overAllExpreience"
+                }
+            ]
+        },
+        {
+            "topic": "Spa",
+            "ques": "Thabiti Spa",
+            "icon": "Spa-min.jpg",
+            "isChecked": false,
+            "isMandatory": false,
+            "questions": [
+                {
+                    "ques": "How warm was the welcome you received when you arrived at Thabiti Spa",
+                    "feedBackFor": "spa_arrivalWelcome"
+                },
+                {
+                    "ques": "Ambiance of massage room",
+                    "feedBackFor": "spa_ambiance"
+                },
+                {
+                    "ques": "Your therapist was friendly, knowledgeable, and professional",
+                    "feedBackFor": "spa_therapist"
+                },
+                {
+                    "ques": "Your appointment started and finished on time",
+                    "feedBackFor": "spa_appointmentTime",
+                    "options": [
+                        {
+                            "label": "YES",
+                            "rating": 4
+                        },
+                        {
+                            "label": "NO",
+                            "rating": 1
+                        }
+                    ]
+                },
+                {
+                    "ques": "How you feel, your needs and concerns were addressed",
+                    "feedBackFor": "spa_feeling"
+                },
+                {
+                    "ques": "Did your treatment meet your expectations",
+                    "feedBackFor": "spa_treatment",
+                    "options": [
+                        {
+                            "label": "YES",
+                            "rating": 4
+                        },
+                        {
+                            "label": "NO",
+                            "rating": 1
+                        }
+                    ]
+                },
+                {
+                    "ques": "Value of service for price paid",
+                    "feedBackFor": "spa_valueForMoney"
+                },
+                {
+                    "ques": "Overall Experience",
+                    "feedBackFor": "spa_overAll"
+                }
+            ]
+        },
+        {
+            "topic": "Pool",
+            "ques": "Swimming Pool",
+            "isChecked": false,
+            "isMandatory": false,
+            "icon": "swimmingpool-min.jpg",
+            "questions": [
+                {
+                    "ques": "How was your experience with the water temperature",
+                    "feedBackFor": "pool_temp",
+                    "options": [
+                        {
+                            "label": "Too Cold",
+                            "rating": 1
+                        },
+                        {
+                            "label": "Normal",
+                            "rating": 4
+                        },
+                        {
+                            "label": "Too Hot",
+                            "rating": 2
+                        }
+                    ]
+                },
+                {
+                    "ques": "Cleanliness of Pool & nearby Area",
+                    "feedBackFor": "pool_cleanliness"
+                },
+                {
+                    "ques": "Cleanliness of Changing Room & Locker",
+                    "feedBackFor": "pool_changingArea"
+                }
+            ]
+        },
+        {
+            "topic": "Fitness Center",
+            "ques": "Fitness Center",
+            "isChecked": false,
+            "isMandatory": false,
+            "icon": "gym-min.jpg",
+            "questions": [
+                {
+                    "ques": "Fitness Centre Cleanliness",
+                    "feedBackFor": "gym_cleanliness"
+                },
+                {
+                    "ques": "Changing Room & wash Room Cleanliness",
+                    "feedBackFor": "gym_chaningRoom"
+                },
+                {
+                    "ques": "Equipment Maintenance",
+                    "feedBackFor": "gym_equipment"
+                },
+                {
+                    "ques": "Level of Supervision",
+                    "feedBackFor": "gym_supervision"
+                },
+                {
+                    "ques": "Fitness Instructor Service/Helpfulness",
+                    "feedBackFor": "gym_instructor"
+                },
+                {
+                    "ques": "Reception Service/Helpfulness",
+                    "feedBackFor": "gym_reception"
+                },
+                {
+                    "ques": "Overall Service",
+                    "feedBackFor": "gym_overAll"
+                }
+            ]
+        },
+        {
+            "topic": "Travel Desk",
+            "ques": "Travel Desk",
+            "isChecked": false,
+            "isMandatory": false,
+            "icon": "gym-min.jpg",
+            "questions": [
+                {
+                    "ques": "Condition & Cleanliness of the car",
+                    "feedBackFor": "travel_condition"
+                },
+                {
+                    "ques": "How do you rate the driver? Safety, politeness & performance",
+                    "feedBackFor": "travel_safety"
+                },
+                {
+                    "ques": "  Were the driver on your trip accommodating and able to help you with practical problems?",
+                    "feedBackFor": "travel_helpfull",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "rating": 4
+                        },
+                        {
+                            "label": "No",
+                            "rating": 1
+                        }
+                    ]
+                },
+                {
+                    "ques": "Driver’s knowledge about destination",
+                    "feedBackFor": "travel_driverKnowledge"
+                },
+                {
+                    "ques": "Driver’s enthusiasm",
+                    "feedBackFor": "travel_driverEnthu"
+                },
+                {
+                    "ques": "You were offered Water & Wet towel in your trip",
+                    "feedBackFor": "travel_amunity",
+                    "options": [
+                        {
+                            "label": "Yes",
+                            "rating": 4
+                        },
+                        {
+                            "label": "No",
+                            "rating": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

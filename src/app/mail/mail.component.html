@@ -1,0 +1,56 @@
+<div style="margin-top:20px;">
+  <div class="col-md-4" *ngIf="userFeedBack.hotel.length">
+
+    <mat-list style="max-height:350px;overflow:auto">
+      <mat-list-item *ngFor="let user of userFeedBack.hotel;let i = index;" style="cursor:pointer;"
+        (click)="showMoreInfo(i)">
+
+        <mat-icon mat-list-icon>mail</mat-icon>
+        <h4 mat-line>{{user.fb_name}}</h4>
+        <p mat-line> {{user.time | date}} </p>
+
+        <mat-divider></mat-divider>
+      </mat-list-item>
+
+    </mat-list>
+  </div>
+  <div class="col-md-6">
+
+    <mat-card style="width: 715px;">
+      <mat-card-header>
+        <div mat-card-avatar><i class="material-icons" style="font-size: 50px;">face</i></div>
+        <mat-card-title> Mr. {{displayInfo.fb_name}}</mat-card-title>
+        <mat-card-subtitle> On : {{displayInfo.time | date}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-divider></mat-divider><br>
+      <mat-card-content>
+        <mat-card-subtitle> Contact: {{displayInfo.fb_phone}}</mat-card-subtitle>
+        <!-- <p style="font-size: 20px; font-family: inherit;">
+         
+        </p> -->
+        <div class="well"> {{displayInfo.suggestionShare}}</div>
+        <mat-divider></mat-divider>
+        <br>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <form [formGroup]="feedbackForm">
+          <mat-card-subtitle style="margin-left: 9px;">To:
+            <mat-chip-list aria-label="Fish selection" style="display: inline-block;">
+              <mat-chip>
+                {{displayInfo.fb_mail}}
+              </mat-chip>
+            </mat-chip-list>
+          </mat-card-subtitle>
+
+          <mat-form-field class="textArea">
+            <textarea matInput formControlName="message" placeholder="Leave a comment"></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="accent" (click)="mailBack(displayInfo)"
+            style="margin-left: 5px;">Revert</button>
+        </form>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<nav class="navbar header" style="border-bottom: 4px solid #f7cb98;">
+    <div class="container-fluid">
+
+        <div class="example-header-image"></div>
+
+        <div class="login-txt" (click)="openLogin()" [hidden]="!router.url.includes('Login')">
+            <span>Login</span>
+        </div>
+
+        <button class="login" mat-icon-button color="accent" [matMenuTriggerFor]="menu"
+            *ngIf="!router.url.includes('Login') && !router.url.includes('Feedback')  && !router.url.includes('ThankYou')">
+
+            <img src="assets/img/video.jpg" class="img-logo" [hidden]="router.url.includes('Login')">
+            <mat-icon aria-hidden="false" [hidden]="router.url.includes('Login')" aria-label="Example home icon">user
+            </mat-icon>
+
+            <span class="username" [hidden]="router.url.includes('Login')"> Welcome {{user}}</span>
+            <i class="material-icons" style="color:black">
+                keyboard_arrow_down
+            </i>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/SurveyResult/Settings">Settings</button>
+            <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+
+    </div>
+</nav>
+<app-loader></app-loader>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,47 @@
+{
+    "data": [
+        {
+            "topic": "HR Department",
+            "ques": "Please rate the following on a scale of needs improvement to excellent:",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "Atmosphere & Décor",
+                    "feedBackFor": "hr_Question1"
+                },
+                {
+                    "ques": "Cleanliness",
+                    "feedBackFor": "hr_Question2"
+                },
+                {
+                    "ques": "Internet Connection & Speed",
+                    "feedBackFor": "hr_Question3"
+                },
+                {
+                    "ques": "Temperature and Air Flow",
+                    "feedBackFor": "hr_Question4"
+                },
+                {
+                    "ques": "Breakout Sessions ",
+                    "feedBackFor": "hr_Question5"
+                },
+                {
+                    "ques": "Food & Beverage service",
+                    "feedBackFor": "hr_Question6"
+                },
+                {
+                    "ques": "Qualhry & Quanthry of snacks provided during your meeting",
+                    "feedBackFor": "hr_Question7"
+                },
+                {
+                    "ques": "Staff Atthrude",
+                    "feedBackFor": "hr_Question8"
+                },
+                {
+                    "ques": "Comfort of Room Chair & Table Comfort ",
+                    "feedBackFor": "hr_Question9"
+                }
+            ]
+        }
+    ]
+}

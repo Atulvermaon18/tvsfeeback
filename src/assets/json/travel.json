@@ -1,0 +1,57 @@
+    {
+        "data": [
+            {
+                "topic": "Travel Desk",
+                "ques": "Travel Desk",
+                "isChecked": false,
+                "isMandatory": false,
+                "icon": "video.jpg",
+                "questions": [
+                    {
+                        "ques": "Condition & Cleanliness of the car",
+                        "feedBackFor": "travel_Question1"
+                    },
+                    {
+                        "ques": "How do you rate the driver? Safety, politeness & performance",
+                        "feedBackFor": "travel_Question2"
+                    },
+                    {
+                        "ques": "  Were the driver on your trip accommodating and able to help you with practical problems?",
+                        "feedBackFor": "travel_Question3",
+                        "options": [
+                            {
+                                "label": "Yes",
+                                "rating": 4
+                            },
+                            {
+                                "label": "No",
+                                "rating": 1
+                            }
+                        ]
+                    },
+                    {
+                        "ques": "Driver’s knowledge about destination",
+                        "feedBackFor": "travel_Question4"
+                    },
+                    {
+                        "ques": "Driver’s enthusiasm",
+                        "feedBackFor": "travel_Question5"
+                    },
+                    {
+                        "ques": "You were offered Water & Wet towel in your trip",
+                        "feedBackFor": "travel_Question6",
+                        "options": [
+                            {
+                                "label": "Yes",
+                                "rating": 4
+                            },
+                            {
+                                "label": "No",
+                                "rating": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }

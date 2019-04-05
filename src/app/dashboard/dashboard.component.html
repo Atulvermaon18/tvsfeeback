@@ -1,0 +1,76 @@
+<div class="container" style="margin-top:10px;">
+
+
+
+  <mat-divider></mat-divider>
+  <br>
+  <h4>Rating is from {{feedback.totalHotelFeedback}} Employee</h4>
+  <div class="row">
+    <mat-card class="col-md-12">
+      <div class="col-md-12 text-right">
+        <form [formGroup]="compareMonths">
+          <!-- <DateRangePicker fromDate={tate.fromDate} date toDate={tate.toDate} Date onChange={handleDateRangeChange}
+            closeDialogOnSelection></DateRangePicker> -->
+          <mat-slide-toggle style="margin-right:10px;font-weight: normal;" (click)="dateRangeHandler()">
+            Use Date Range
+          </mat-slide-toggle>
+
+
+
+          Compare
+          <mat-form-field style="width: 200px; margin: 0px 15px;" *ngIf="!useDateRange">
+            <input matInput [matDatepicker]="picker1" formControlName="month1" placeholder="Start Date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+          <ngx-mat-drp *ngIf="useDateRange" style="display:inline-block;"
+            (selectedDateRangeChanged)="updateRangeStart($event,'set1')" [options]="options1" #dateRangePicker>
+          </ngx-mat-drp>
+          With
+          <mat-form-field style="width: 200px; margin: 0px 15px;" *ngIf="!useDateRange">
+            <input matInput [matDatepicker]="picker2" formControlName="month2" placeholder="End Date">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+          <ngx-mat-drp *ngIf="useDateRange" style="display:inline-block;"
+            (selectedDateRangeChanged)="updateRangeEnd($event,'set2')" [options]="options2" #dateRangePicker>
+          </ngx-mat-drp>
+
+          <button mat-raised-button color="accent" (click)="doCompareMonth()"> Compare </button>
+        </form>
+      </div>
+      <div [chart]="bar"></div>
+    </mat-card>
+  </div>
+  <br>
+
+  <br>
+  <div class="row">
+
+    <mat-card class="col-md-12">
+      <div class="col-md-12 text-right">
+        <form [formGroup]="compareYear">
+
+
+          Compare
+          <mat-form-field style="width: 200px; margin: 0px 15px;">
+            <input matInput [matDatepicker]="picker3" formControlName="year1" placeholder="Start Date">
+            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+          With
+          <mat-form-field style="width: 200px; margin: 0px 15px;">
+            <input matInput [matDatepicker]="picker4" formControlName="year2" placeholder="End Date">
+            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+          <button mat-raised-button color="accent" (click)="doCompareYears()">Compare </button>
+        </form>
+      </div>
+      <div [chart]="barYear"></div>
+    </mat-card>
+  </div>
+  <br>
+
+
+</div>

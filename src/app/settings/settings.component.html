@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-list>
+    <mat-list-item>Change Password</mat-list-item>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card>
+      <form class="example-form" [formGroup]="feedbackForm">
+        <mat-form-field class="fieldWith">
+          <input matInput placeholder="Username" formControlName="username" required>
+        </mat-form-field>
+        <mat-form-field class="fieldWith">
+          <input matInput placeholder="Old Password" formControlName="oldPassword" required>
+        </mat-form-field>
+        <mat-form-field class="fieldWith">
+          <input matInput placeholder="Password" formControlName="password" required>
+        </mat-form-field>
+        <mat-form-field class="fieldWith">
+          <input matInput placeholder="Re-Password" formControlName="rePassword" required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="changePassword()">
+          Change Password
+        </button>
+      </form>
+    </mat-card>
+
+
+    <mat-divider></mat-divider>
+    <mat-list-item>Add Emails</mat-list-item>
+    <br>
+    <mat-card>
+      <!-- <form class="example-form" [formGroup]="feedbackForm"> -->
+      <mat-form-field class="example-chip-list">
+        <mat-chip-list #chipList aria-label="Add Emails">
+          <mat-chip *ngFor="let email of emails" [selectable]="selectable" [removable]="removable"
+            (removed)="remove(email)">
+            {{email}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Add Emails" [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+
+      <!-- </form> -->
+    </mat-card>
+  </mat-list>
+</mat-card>

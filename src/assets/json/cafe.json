@@ -1,0 +1,47 @@
+{
+    "data": [
+        {
+            "topic": "Cafeteria",
+            "ques": "Please rate the following on a scale of needs improvement to excellent:",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "Atmosphere & Décor",
+                    "feedBackFor": "cafe_Question1"
+                },
+                {
+                    "ques": "Cleanliness",
+                    "feedBackFor": "cafe_Question2"
+                },
+                {
+                    "ques": "Internet Connection & Speed",
+                    "feedBackFor": "cafe_Question3"
+                },
+                {
+                    "ques": "Temperature and Air Flow",
+                    "feedBackFor": "cafe_Question4"
+                },
+                {
+                    "ques": "Breakout Sessions ",
+                    "feedBackFor": "cafe_Question5"
+                },
+                {
+                    "ques": "Food & Beverage service",
+                    "feedBackFor": "cafe_Question6"
+                },
+                {
+                    "ques": "Quality & Quantity of snacks provided during your meeting",
+                    "feedBackFor": "cafe_Question7"
+                },
+                {
+                    "ques": "Staff Attitude",
+                    "feedBackFor": "cafe_Question8"
+                },
+                {
+                    "ques": "Comfort of Room Chair & Table Comfort ",
+                    "feedBackFor": "cafe_Question9"
+                }
+            ]
+        }
+    ]
+}

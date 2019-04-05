@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row" *ngFor="let feedback of feedbackItem" style="margin-top:25px;">
+    <div class="col-md-12">
+      <mat-card class="gradiant-header">
+        <mat-card-content class="row">
+
+          <h4 style="display:inline-block;margin-left:30px">
+            <i class="material-icons">
+              {{feedback.icon}}
+            </i>
+            {{feedback.name}}</h4>
+          <button class="pull-right" style="margin-right:20px" mat-raised-button color="primary"
+            (click)="selectQuest(feedback.id)">Give Feedback</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <br><br>
+
+
+
+</div>

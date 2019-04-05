@@ -1,0 +1,47 @@
+{
+    "data": [
+        {
+            "topic": "IT Department",
+            "ques": "Please rate the following on a scale of needs improvement to excellent:",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "How skilled at their jobs are the members of your team?",
+                    "feedBackFor": "it_Atomsphere"
+                },
+                {
+                    "ques": "How professionally do the members of your team behave?",
+                    "feedBackFor": "it_cleanliness"
+                },
+                {
+                    "ques": "How honest with each other are the members of your team?",
+                    "feedBackFor": "it_internetConn"
+                },
+                {
+                    "ques": "How well do members of your team share responsibility for tasks?",
+                    "feedBackFor": "it_airFlow"
+                },
+                {
+                    "ques": "How well does your supervisor work with clients?",
+                    "feedBackFor": "it_breakout"
+                },
+                {
+                    "ques": "How efficiently are team meetings conducted?",
+                    "feedBackFor": "it_foodService"
+                },
+                {
+                    "ques": "How fairly are responsibilities shared among your team members?",
+                    "feedBackFor": "it_quality"
+                },
+                {
+                    "ques": "How hardworking is your supervisor?",
+                    "feedBackFor": "it_staff"
+                },
+                {
+                    "ques": "How often does your team meet its deadlines?",
+                    "feedBackFor": "it_comfort"
+                }
+            ]
+        }
+    ]
+}

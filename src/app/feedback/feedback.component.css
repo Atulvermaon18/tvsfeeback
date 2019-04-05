@@ -1,0 +1,66 @@
+.m30{
+    margin-left: 50px;
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+.ques{
+  width:600px;
+  display: inline-block;
+  margin-left:10px;
+  font-weight: 550;
+  font-size: 20px;
+}
+.chkbox{
+  float: right;
+  margin: 10px;
+}
+  .page-footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#3f51b5;
+    height: 50px;
+    color: white;
+    text-align: center;
+ }
+
+ .header{
+  margin-bottom: 0px;
+  color: #000;
+  background:#f6931e;
+  border: 0px;
+}
+
+ .example-card {
+  max-width: 400px;
+}
+
+.title{
+  font-weight: 900;
+    margin: 8px 54px;
+    width:800px;
+    font-size: 24px;
+}
+
+.sad{
+  background-image: url('/assets/img/1.png');
+  width: 20px;
+  height: 20px;
+}
+
+.example-header-image {
+  background-image: url('/assets/img/RT-Logo.jpg');
+  background-size: cover;
+  display: inline-block;
+  color:#fff;
+ 
+}
+.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  background-color: #bac752;
+}

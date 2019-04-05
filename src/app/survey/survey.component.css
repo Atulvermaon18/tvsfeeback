@@ -1,0 +1,256 @@
+table {
+    width: 100%;
+  }
+
+  .menuItem{
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .navleft{
+    /* width: 400px;
+    height: 200px; */
+    margin: 10px;
+  }
+
+  th, tr {
+    border-bottom: 2px dashed #e2e5ed;
+}
+
+.Tr {
+    border: 1px solid white;
+
+}
+
+.Tr td {
+    border: 1px solid white;
+    
+}
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell{
+  text-align: center !important;
+ }
+.table thead tr {
+    border: 10px solid white;
+}
+
+.table th  {
+    color: #777777;
+    font-weight: 500;
+}
+
+.t-header{
+    /* background-color:#e2e5ed !important; */
+    border-bottom: 2px solid #e2e5ed;
+    border-top: 2px solid #e2e5ed;
+    
+}
+.t-header tr{
+    height: 48px !important;
+}
+
+.IconsWithBgWhite {
+    background-color: #ececec;
+    padding: 5px;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    margin-right: 10px;
+}
+
+.hyperlink{
+  color:blue;
+  cursor: pointer;
+}
+.BadgeSpan {
+    cursor: pointer;
+    font-family: 'Zilla Slab', serif;
+    font-size: 15px;
+    padding: 10px 27px 7px 29px;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #e2e5ed;
+}
+
+.dropdown-css {
+    border-radius: 20px;
+    width: 160px;
+    margin-right: 10px;
+    height: auto;
+}
+
+.mar_none {
+    margin: 0;    
+}
+.hyperlink-click{
+    color:#0083C0;;
+    cursor: pointer;
+
+}
+.quote-href{
+    color:#0083c0;
+    display: inline-block !important;
+    cursor: pointer;
+}
+
+.QuicQuotes {
+    width: 136px;
+    padding: 8px 10px 0px 15px;
+    border: 1px solid #0083c0;
+    color: #0083c0;
+    border-radius: 50px 50px 50px 50px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.check-margin {
+    margin-left: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+::ng-deep .mat-checkbox-inner-container {
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 5px !important;
+}
+
+::ng-deep .mat-menu-panel {
+    max-width: 400px !important;
+}
+
+.checkbox-menu {
+    padding: 15px;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.checkbox-confirm {
+    padding: 6px 14px;
+    border: 1px solid #54b7e4;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50px 50px 49px 50px;
+    background-color: #54b7e4;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 7px;
+    margin-left: 13px;
+}
+
+.checkbox-menu {
+    padding: 15px;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.cur-pointer {
+    cursor: pointer;
+}
+
+.opa8 {
+    opacity: 0.8;
+}
+
+.Active {
+    color: #FF5200;
+    background: #fff;
+    font-family: 'Zilla Slab', serif;
+    font-size: 15px;
+}
+
+.gray{
+    filter: grayscale(100%);
+}
+
+.searchContainer {
+    display: grid;
+    grid-template-columns:1.5rem 4fr 1fr;
+    width:300px;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: #ececec;
+  }
+  
+  .searchContainer:focus-within i {
+    display: none;
+  }
+  
+  .searchContainer:focus-within .searchBox{
+    grid-column:1/4;
+  }
+  
+  .searchContainer:focus-within .searchBox::placeholder {
+    color:transparent;
+  }
+  
+  .searchIcon {
+    padding: 0.75rem;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 3;
+    z-index: 2;
+  }
+  
+  .searchBox {
+    border: 0;
+    padding: 0.5rem;
+    height: 40px;
+    grid-column:2/4;
+    grid-row:1;
+    outline:none;
+    background-color: #ececec;
+  }
+
+  .fa-search {
+      color: #6d6d6d;
+  }
+  
+
+  
+tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: #f5f5f5;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .example-element-diagram {
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    height: 104px;
+  }
+  
+  .example-element-symbol {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }
