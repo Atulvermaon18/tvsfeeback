@@ -6,7 +6,7 @@
   <mat-card-subtitle>Phone: {{data.fb_phone}}</mat-card-subtitle>
 </mat-card-header>
 <!-- <mat-card-content> -->
-<table class="table table-striped">
+<table class="table table-striped" id="table">
   <thead>
     <tr>
       <th>Questions Asked</th>
@@ -23,4 +23,4 @@
 <div>
   <strong>Comments :</strong> {{data.suggestionShare}}
 </div>
-<i class="material-icons print" (click)="printReport(item.key)">print</i>
+<i class="material-icons print" (click)="printReport('table')">print</i>
