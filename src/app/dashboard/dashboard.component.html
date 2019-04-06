@@ -4,7 +4,7 @@
 
   <mat-divider></mat-divider>
   <br>
-  <h4>Rating is from {{feedback.totalHotelFeedback}} Employee</h4>
+  <h4>Rating is from {{feedback.empFeedback}} Employee</h4>
   <div class="row">
     <mat-card class="col-md-12">
       <div class="col-md-12 text-right">
@@ -44,32 +44,6 @@
   </div>
   <br>
 
-  <br>
-  <div class="row">
-
-    <mat-card class="col-md-12">
-      <div class="col-md-12 text-right">
-        <form [formGroup]="compareYear">
-
-
-          Compare
-          <mat-form-field style="width: 200px; margin: 0px 15px;">
-            <input matInput [matDatepicker]="picker3" formControlName="year1" placeholder="Start Date">
-            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-            <mat-datepicker #picker3></mat-datepicker>
-          </mat-form-field>
-          With
-          <mat-form-field style="width: 200px; margin: 0px 15px;">
-            <input matInput [matDatepicker]="picker4" formControlName="year2" placeholder="End Date">
-            <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
-            <mat-datepicker #picker4></mat-datepicker>
-          </mat-form-field>
-          <button mat-raised-button color="accent" (click)="doCompareYears()">Compare </button>
-        </form>
-      </div>
-      <div [chart]="barYear"></div>
-    </mat-card>
-  </div>
   <br>
 
 

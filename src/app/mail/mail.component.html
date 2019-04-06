@@ -1,7 +1,7 @@
 <div style="margin-top:20px;">
   <div class="col-md-4" *ngIf="userFeedBack.hotel.length">
 
-    <mat-list style="max-height:350px;overflow:auto">
+    <mat-list style="max-height:650px;overflow:auto">
       <mat-list-item *ngFor="let user of userFeedBack.hotel;let i = index;" style="cursor:pointer;"
         (click)="showMoreInfo(i)">
 
