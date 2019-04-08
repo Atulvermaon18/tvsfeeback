@@ -12,18 +12,31 @@
       </div>
 
       <div class="col-md-8 text-right">
+
+        <mat-form-field>
+          <mat-label>Filter by Department</mat-label>
+          <mat-select (selectionChange)="applyFilter($event.value)">
+            <mat-option value="">
+              All
+            </mat-option>
+            <mat-option *ngFor="let dept of departments" [value]="dept.value">
+              {{dept.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
         <mat-form-field style="width: 200px; margin: 0px 15px;">
-          <input matInput [matDatepicker]="picker1" placeholder="Start Date" (dateChange)="onDateFrom($event)"
+          <input matInput [matDatepicker]="picker1" placeholder="Filter With Date" (dateChange)="onDateFrom($event)"
             [(ngModel)]="feedback.fromdate">
           <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
           <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
 
-        <mat-form-field style="width: 200px; margin: 0px 15px;">
+        <!-- <mat-form-field style="width: 200px; margin: 0px 15px;">
           <input matInput [matDatepicker]="picker3" placeholder="End Date" [(ngModel)]="feedback.enddate">
           <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
           <mat-datepicker #picker3></mat-datepicker>
-        </mat-form-field>
+        </mat-form-field> -->
 
         <img class="IconsWithBgWhite cur-pointer" (click)="print('quotesGrid')" src="assets/img/Icons/printer.png">
         <img class="IconsWithBgWhite cur-pointer" [matMenuTriggerFor]="menu" src="assets/img/Icons/more.png">

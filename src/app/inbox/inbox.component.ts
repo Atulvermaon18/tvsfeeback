@@ -24,7 +24,30 @@ export class InboxComponent implements OnInit {
     fromdate: "",
     enddate: ""
   }
-
+  departments = [{
+    'value': 'it',
+    'viewValue': "IT Department"
+  },
+  {
+    'value': 'hr',
+    'viewValue': "HR Department"
+  },
+  {
+    'value': 'cafe',
+    'viewValue': "Cafeteria"
+  },
+  {
+    'value': 'office',
+    'viewValue': "Office Environment"
+  },
+  {
+    'value': 'meeting',
+    'viewValue': "Meeting Rooms"
+  },
+  {
+    'value': 'travel',
+    'viewValue': "Travel Desk"
+  }]
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -83,6 +106,7 @@ export class InboxComponent implements OnInit {
   }
 
   applyFilter(filterValue: string) {
+    console.log(filterValue)
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
