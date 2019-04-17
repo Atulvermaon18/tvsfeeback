@@ -24,13 +24,16 @@
   <div *ngIf="forgotPwdScreen">
 
   </div>
-  <button mat-button color="primary" (click)="forgotPwd()" *ngIf="!forgotPwdScreen">Forgot password?</button>
+  <button mat-button color="primary" (click)="forgotPwd(true)" *ngIf="!forgotPwdScreen">Forgot password?</button>
   <mat-card-actions style="margin-left:50%;">
     <button mat-raised-button color="primary" *ngIf="!forgotPwdScreen">
       Cancel
     </button>
-    <button mat-raised-button color="primary" (click)="submit()" *ngIf="!forgotPwdScreen">
+    <button mat-raised-button color="primary" type="submit" (click)="submit()" *ngIf="!forgotPwdScreen">
       Login
+    </button>
+    <button mat-raised-button color="primary" (click)="forgotPwd(false)" *ngIf="forgotPwdScreen">
+      Back
     </button>
     <button mat-raised-button color="primary" (click)="sendPassword()" *ngIf="forgotPwdScreen">
       Send

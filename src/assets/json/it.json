@@ -7,39 +7,39 @@
             "questions": [
                 {
                     "ques": "How skilled at their jobs are the members of your team?",
-                    "feedBackFor": "it_Atomsphere"
+                    "feedBackFor": "it_Question1"
                 },
                 {
                     "ques": "How professionally do the members of your team behave?",
-                    "feedBackFor": "it_cleanliness"
+                    "feedBackFor": "it_Question2"
                 },
                 {
                     "ques": "How honest with each other are the members of your team?",
-                    "feedBackFor": "it_internetConn"
+                    "feedBackFor": "it_Question3"
                 },
                 {
                     "ques": "How well do members of your team share responsibility for tasks?",
-                    "feedBackFor": "it_airFlow"
+                    "feedBackFor": "it_Question4"
                 },
                 {
                     "ques": "How well does your supervisor work with clients?",
-                    "feedBackFor": "it_breakout"
+                    "feedBackFor": "it_Question5"
                 },
                 {
                     "ques": "How efficiently are team meetings conducted?",
-                    "feedBackFor": "it_foodService"
+                    "feedBackFor": "it_Question6"
                 },
                 {
                     "ques": "How fairly are responsibilities shared among your team members?",
-                    "feedBackFor": "it_quality"
+                    "feedBackFor": "it_Question7"
                 },
                 {
                     "ques": "How hardworking is your supervisor?",
-                    "feedBackFor": "it_staff"
+                    "feedBackFor": "it_Question8"
                 },
                 {
                     "ques": "How often does your team meet its deadlines?",
-                    "feedBackFor": "it_comfort"
+                    "feedBackFor": "it_Question9"
                 }
             ]
         }

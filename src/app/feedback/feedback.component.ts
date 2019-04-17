@@ -23,15 +23,16 @@ export class FeedbackComponent implements OnInit {
 
     this.feedbackForm = this.formBuilder.group({
 
-      it_Atomsphere: ['', Validators.required],
-      it_cleanliness: ['', Validators.required],
-      it_internetConn: ['', Validators.required],
-      it_airFlow: ['', Validators.required],
-      it_breakout: ['', Validators.required],
-      it_foodService: ['', Validators.required],
-      it_quality: ['', Validators.required],
-      it_staff: ['', Validators.required],
-      it_comfort: ['', Validators.required],
+      it_Question1: ['', Validators.required],
+      it_Question2: ['', Validators.required],
+      it_Question3: ['', Validators.required],
+      it_Question4: ['', Validators.required],
+      it_Question5: ['', Validators.required],
+      it_Question6: ['', Validators.required],
+      it_Question7: ['', Validators.required],
+      it_Question8: ['', Validators.required],
+      it_Question9: ['', Validators.required],
+      it_Question10: ['', Validators.required],
 
       hr_Question1: ['', Validators.required],
       hr_Question2: ['', Validators.required],
@@ -75,6 +76,17 @@ export class FeedbackComponent implements OnInit {
       meeting_Question8: ['', Validators.required],
       meeting_Question9: ['', Validators.required],
       meeting_Question10: ['', Validators.required],
+
+      gq_Question1: ['', Validators.required],
+      gq_Question2: ['', Validators.required],
+      gq_Question3: ['', Validators.required],
+      gq_Question4: ['', Validators.required],
+      gq_Question5: ['', Validators.required],
+      gq_Question6: ['', Validators.required],
+      gq_Question7: ['', Validators.required],
+      gq_Question8: ['', Validators.required],
+      gq_Question9: ['', Validators.required],
+      gq_Question10: ['', Validators.required],
 
       travel_Question1: ['', Validators.required],
       travel_Question2: ['', Validators.required],
@@ -156,13 +168,13 @@ export class FeedbackComponent implements OnInit {
     this.clean(params);
     switch (this.service.questionType) {
       case 'it':
-        this.service.feedbackPost('/tvsfeedback/ITCreate', this.feedbackForm['value']).subscribe(result => {
+        this.service.feedbackPost('/feedback/ITCreate', this.feedbackForm['value']).subscribe(result => {
           console.log(result);
           this.router.navigate(['/ThankYou']);
         })
         break;
       case 'hr':
-        this.service.feedbackPost('/tvsfeedback/HRCreate', this.feedbackForm['value']).subscribe(result => {
+        this.service.feedbackPost('/feedback/HRCreate', this.feedbackForm['value']).subscribe(result => {
           console.log(result);
           this.router.navigate(['/ThankYou']);
         })

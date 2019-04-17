@@ -200,7 +200,7 @@ export class DashboardComponent implements OnInit {
 
   doFilter(req, by) {
     req.type = by;
-    this.service.getInputs('/tvsfeedback/ITRead').subscribe((result: any) => {
+    this.service.getInputs('/feedback/ITRead').subscribe((result: any) => {
       this.feedback.empFeedback = result.data.length;
       this.overAllRatingObj = {
         it: [],

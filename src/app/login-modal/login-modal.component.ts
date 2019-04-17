@@ -49,9 +49,14 @@ export class LoginModalComponent implements OnInit {
   }
 
   forgotPwdScreen = false;
-  forgotPwd() {
-    this.forgotPwdScreen = true;
-    this.feedbackForm.get('password').disable();
+  forgotPwd(check) {
+    this.forgotPwdScreen = check;
+    if (check) {
+      this.feedbackForm.get('password').disable();
+    } else {
+      this.feedbackForm.get('password').enable();
+    }
+
   }
 
   sendPassword() {

@@ -33,7 +33,7 @@ export class MailComponent implements OnInit {
       message: ['', Validators.required],
     });
 
-    this.service.getInputs('/tvsfeedback/ITRead').subscribe((result: any) => {
+    this.service.getInputs('/feedback/ITRead').subscribe((result: any) => {
       this.userFeedBack.hotel = result.data;
       this.displayInfo = this.userFeedBack.hotel[0];
     })

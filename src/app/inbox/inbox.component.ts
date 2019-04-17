@@ -68,7 +68,7 @@ export class InboxComponent implements OnInit {
     });
 
 
-    this.service.getInputs('/tvsfeedback/ITRead').subscribe((result: any) => {
+    this.service.getInputs('/feedback/ITRead').subscribe((result: any) => {
 
       this.tableData = this.calculateOverAll(result.data);
       this.dataSource = new MatTableDataSource<any>(this.tableData);
