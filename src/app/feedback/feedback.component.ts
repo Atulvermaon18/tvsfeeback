@@ -16,77 +16,77 @@ export class FeedbackComponent implements OnInit {
   options: any = [];
   images = [];
   selectedImage = "assets/img/video.jpg";
-
+  todaysDate = new Date();
   constructor(private formBuilder: FormBuilder, private service: ApiService, private router: Router) { }
 
   ngOnInit() {
 
     this.feedbackForm = this.formBuilder.group({
 
-      it_Question1: ['', Validators.required],
-      it_Question2: ['', Validators.required],
-      it_Question3: ['', Validators.required],
-      it_Question4: ['', Validators.required],
-      it_Question5: ['', Validators.required],
-      it_Question6: ['', Validators.required],
-      it_Question7: ['', Validators.required],
-      it_Question8: ['', Validators.required],
-      it_Question9: ['', Validators.required],
-      it_Question10: ['', Validators.required],
+      // it_Question1: ['', Validators.required],
+      // it_Question2: ['', Validators.required],
+      // it_Question3: ['', Validators.required],
+      // it_Question4: ['', Validators.required],
+      // it_Question5: ['', Validators.required],
+      // it_Question6: ['', Validators.required],
+      // it_Question7: ['', Validators.required],
+      // it_Question8: ['', Validators.required],
+      // it_Question9: ['', Validators.required],
+      // it_Question10: ['', Validators.required],
 
-      hr_Question1: ['', Validators.required],
-      hr_Question2: ['', Validators.required],
-      hr_Question3: ['', Validators.required],
-      hr_Question4: ['', Validators.required],
-      hr_Question5: ['', Validators.required],
-      hr_Question6: ['', Validators.required],
-      hr_Question7: ['', Validators.required],
-      hr_Question8: ['', Validators.required],
-      hr_Question9: ['', Validators.required],
+      // hr_Question1: ['', Validators.required],
+      // hr_Question2: ['', Validators.required],
+      // hr_Question3: ['', Validators.required],
+      // hr_Question4: ['', Validators.required],
+      // hr_Question5: ['', Validators.required],
+      // hr_Question6: ['', Validators.required],
+      // hr_Question7: ['', Validators.required],
+      // hr_Question8: ['', Validators.required],
+      // hr_Question9: ['', Validators.required],
 
-      cafe_Question1: ['', Validators.required],
-      cafe_Question2: ['', Validators.required],
-      cafe_Question3: ['', Validators.required],
-      cafe_Question4: ['', Validators.required],
-      cafe_Question5: ['', Validators.required],
-      cafe_Question6: ['', Validators.required],
-      cafe_Question7: ['', Validators.required],
-      cafe_Question8: ['', Validators.required],
-      cafe_Question9: ['', Validators.required],
-
-
-      office_Question1: ['', Validators.required],
-      office_Question2: ['', Validators.required],
-      office_Question3: ['', Validators.required],
-      office_Question4: ['', Validators.required],
-      office_Question5: ['', Validators.required],
-      office_Question6: ['', Validators.required],
-      office_Question7: ['', Validators.required],
-      office_Question8: ['', Validators.required],
-      office_Question9: ['', Validators.required],
+      // cafe_Question1: ['', Validators.required],
+      // cafe_Question2: ['', Validators.required],
+      // cafe_Question3: ['', Validators.required],
+      // cafe_Question4: ['', Validators.required],
+      // cafe_Question5: ['', Validators.required],
+      // cafe_Question6: ['', Validators.required],
+      // cafe_Question7: ['', Validators.required],
+      // cafe_Question8: ['', Validators.required],
+      // cafe_Question9: ['', Validators.required],
 
 
-      meeting_Question1: ['', Validators.required],
-      meeting_Question2: ['', Validators.required],
-      meeting_Question3: ['', Validators.required],
-      meeting_Question4: ['', Validators.required],
-      meeting_Question5: ['', Validators.required],
-      meeting_Question6: ['', Validators.required],
-      meeting_Question7: ['', Validators.required],
-      meeting_Question8: ['', Validators.required],
-      meeting_Question9: ['', Validators.required],
-      meeting_Question10: ['', Validators.required],
+      // office_Question1: ['', Validators.required],
+      // office_Question2: ['', Validators.required],
+      // office_Question3: ['', Validators.required],
+      // office_Question4: ['', Validators.required],
+      // office_Question5: ['', Validators.required],
+      // office_Question6: ['', Validators.required],
+      // office_Question7: ['', Validators.required],
+      // office_Question8: ['', Validators.required],
+      // office_Question9: ['', Validators.required],
 
-      gq_Question1: ['', Validators.required],
-      gq_Question2: ['', Validators.required],
-      gq_Question3: ['', Validators.required],
-      gq_Question4: ['', Validators.required],
-      gq_Question5: ['', Validators.required],
-      gq_Question6: ['', Validators.required],
-      gq_Question7: ['', Validators.required],
-      gq_Question8: ['', Validators.required],
-      gq_Question9: ['', Validators.required],
-      gq_Question10: ['', Validators.required],
+
+      // meeting_Question1: ['', Validators.required],
+      // meeting_Question2: ['', Validators.required],
+      // meeting_Question3: ['', Validators.required],
+      // meeting_Question4: ['', Validators.required],
+      // meeting_Question5: ['', Validators.required],
+      // meeting_Question6: ['', Validators.required],
+      // meeting_Question7: ['', Validators.required],
+      // meeting_Question8: ['', Validators.required],
+      // meeting_Question9: ['', Validators.required],
+      // meeting_Question10: ['', Validators.required],
+
+      // gq_Question1: ['', Validators.required],
+      // gq_Question2: ['', Validators.required],
+      // gq_Question3: ['', Validators.required],
+      // gq_Question4: ['', Validators.required],
+      // gq_Question5: ['', Validators.required],
+      // gq_Question6: ['', Validators.required],
+      // gq_Question7: ['', Validators.required],
+      // gq_Question8: ['', Validators.required],
+      // gq_Question9: ['', Validators.required],
+      // gq_Question10: ['', Validators.required],
 
       newjoin_Question1: ['', Validators.required],
       newjoin_Question2: ['', Validators.required],
@@ -189,7 +189,9 @@ export class FeedbackComponent implements OnInit {
   }
 
   submit() {
-
+    // debugger;
+    console.log(this.feedbackForm)
+    // return;
     console.log(this.feedbackForm['value']);
     let params = this.feedbackForm['value'];
     this.clean(params);

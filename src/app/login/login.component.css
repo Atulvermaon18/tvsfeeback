@@ -12,3 +12,14 @@
     background-image: url('/assets/img/conference-min.jpg');
     background-size: cover;
   }
+
+  .survey-card{
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 54px 11px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+  }

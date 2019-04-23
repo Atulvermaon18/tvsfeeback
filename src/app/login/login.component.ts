@@ -17,42 +17,42 @@ export class LoginComponent implements OnInit {
     "name": "New Joiners",
     "id": "newJoining",
     "icon": "important_devices",
-    "isEnabled": true
+    "isEnabled": true,
+    "background": '/assets/img/newjoine.jpg',
   }, {
     "name": "IT Department",
     "id": "it",
     "icon": "important_devices",
-    "isEnabled": false
+    "isEnabled": false,
+    "background": '/assets/img/it.png',
   },
   {
     "name": "HR Department",
     "id": "hr",
     "icon": "assignment_ind",
-    "isEnabled": false
+    "isEnabled": false,
+    "background": '/assets/img/hr.png',
   },
   {
     "name": "Office Environment",
     "id": "office",
     "icon": "local_florist",
-    "isEnabled": false
+    "isEnabled": false,
+    "background": '/assets/img/env.jpeg',
   },
   {
     "name": "Meeting Room Availability",
     "id": "mr",
     "icon": "video_call",
-    "isEnabled": false
+    "isEnabled": false,
+    "background": '/assets/img/meeting.jpg',
   },
   {
     "name": "Cafeteria",
     "id": "cafe",
     "icon": "restaurant_menu",
-    "isEnabled": false
-  },
-  {
-    "name": "Late Night Travel For Ladies",
-    "id": "travel",
-    "icon": "departure_board",
-    "isEnabled": false
+    "isEnabled": false,
+    "background": '/assets/img/cafe.jpg',
   }]
 
   constructor(private service: ApiService, private router: Router, public dialog: MatDialog) { }
