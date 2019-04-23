@@ -168,7 +168,7 @@ export class InboxComponent implements OnInit {
 
 
     const dialogRef = this.dialog.open(UserDetailsComponent, {
-      width: '950px',
+      width: '95%',
       height: '500px',
       data: details
     });

@@ -107,6 +107,10 @@ export class FeedbackComponent implements OnInit {
       newjoin_Question17: ['', Validators.required],
       newjoin_Question18: ['', Validators.required],
       newjoin_Question19: ['', Validators.required],
+      newjoin_Question20: ['', Validators.required],
+      newjoin_Question21: ['', Validators.required],
+      newjoin_Question22: ['', Validators.required],
+      newjoin_Question23: ['', Validators.required],
 
 
       fb_name: ['', Validators.required],

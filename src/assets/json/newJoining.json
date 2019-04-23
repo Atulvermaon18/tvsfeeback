@@ -122,6 +122,33 @@
                     "type": "Text"
                 }
             ]
+        },
+        {
+            "topic": "Suggestions",
+            "ques": "How would you rate the culture and environment at TVSNext?",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "Any other feedback / suggestions?",
+                    "feedBackFor": "newjoin_Question20",
+                    "type": "Text"
+                },
+                {
+                    "ques": "Can you suggest any existing practice of our company looks odd? If yes, then what is your opinion what improvement can be brought in?",
+                    "feedBackFor": "newjoin_Question21",
+                    "type": "Text"
+                },
+                {
+                    "ques": "What are some elements of the position you are not enjoying as much? Is this because you have not been given the proper tools or training to be successful, or because you simply do not prefer this kind of work in general?",
+                    "feedBackFor": "newjoin_Question22",
+                    "type": "Text"
+                },
+                {
+                    "ques": "So far, is the job what you expected it to be? Are you feeling challenged by the position, or are you already feeling bored (are you being pushed out of your comfort zone so that you are learning new things or are you stagnating?)",
+                    "feedBackFor": "newjoin_Question23",
+                    "type": "Text"
+                }
+            ]
         }
     ]
 }

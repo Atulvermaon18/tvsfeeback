@@ -54,6 +54,7 @@ export class DashboardComponent implements OnInit {
   overAllRatingObj: any = {
     it: [],
     hr: [],
+    newjoin: []
   }
   selectedFilter: any = {
     month1: "",
@@ -205,7 +206,8 @@ export class DashboardComponent implements OnInit {
       this.feedback.empFeedback = result.data.length;
       this.overAllRatingObj = {
         it: [],
-        hr: []
+        hr: [],
+        newjoine: []
       }
       if (result.data.length) {
         this.barChartCalculation(result.data);
@@ -218,6 +220,7 @@ export class DashboardComponent implements OnInit {
   setZeroForMonths() {
     this.overAllRatingObj.it.push(0);
     this.overAllRatingObj.hr.push(0);
+    this.overAllRatingObj.newjoine.push(0);
   }
 
 
@@ -246,6 +249,15 @@ export class DashboardComponent implements OnInit {
               overAllRating[dept] = overAllRating[dept] + +data[i][type];
             }
             break;
+          case 'newjoin':
+            if (!isNaN(+data[i][type])) {
+              if (!overAllRating[dept]) {
+                overAllRating[dept] = 0;
+              }
+              overAllRating[dept] = overAllRating[dept] + +data[i][type];
+            }
+            break;
+
         }
 
       })
@@ -255,6 +267,8 @@ export class DashboardComponent implements OnInit {
     console.log(overAllRating, data.length);
     this.overAllRatingObj['it'].push(overAllRating['it']);
     this.overAllRatingObj['hr'].push(overAllRating['hr']);
+    this.overAllRatingObj.newjoine.push(overAllRating['newjoin']);
+
     this.structureMonthlyGraphs();
 
 
@@ -307,6 +321,11 @@ export class DashboardComponent implements OnInit {
       }, {
         name: 'HR',
         data: this.overAllRatingObj.hr
+
+      },
+      {
+        name: 'New joinee',
+        data: this.overAllRatingObj.newjoine
 
       },
       {

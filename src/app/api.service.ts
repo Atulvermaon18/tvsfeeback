@@ -9,8 +9,8 @@ export class ApiService {
 
 
   questionType: any = "";
-  devUrl: any = "https://tvssurveyserver.herokuapp.com";
-  // devUrl: any = "http://localhost:8080";
+  // devUrl: any = "https://tvssurveyserver.herokuapp.com";
+  devUrl: any = "http://localhost:8080";
 
 
   constructor(private http: HttpClient) { }
