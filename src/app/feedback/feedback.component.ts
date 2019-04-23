@@ -88,19 +88,32 @@ export class FeedbackComponent implements OnInit {
       gq_Question9: ['', Validators.required],
       gq_Question10: ['', Validators.required],
 
-      travel_Question1: ['', Validators.required],
-      travel_Question2: ['', Validators.required],
-      travel_Question3: ['', Validators.required],
-      travel_Question4: ['', Validators.required],
-      travel_Question5: ['', Validators.required],
-      travel_Question6: ['', Validators.required],
+      newjoin_Question1: ['', Validators.required],
+      newjoin_Question2: ['', Validators.required],
+      newjoin_Question3: ['', Validators.required],
+      newjoin_Question4: ['', Validators.required],
+      newjoin_Question5: ['', Validators.required],
+      newjoin_Question6: ['', Validators.required],
+      newjoin_Question7: ['', Validators.required],
+      newjoin_Question8: ['', Validators.required],
+      newjoin_Question9: ['', Validators.required],
+      newjoin_Question10: ['', Validators.required],
+      newjoin_Question11: ['', Validators.required],
+      newjoin_Question12: ['', Validators.required],
+      newjoin_Question13: ['', Validators.required],
+      newjoin_Question14: ['', Validators.required],
+      newjoin_Question15: ['', Validators.required],
+      newjoin_Question16: ['', Validators.required],
+      newjoin_Question17: ['', Validators.required],
+      newjoin_Question18: ['', Validators.required],
+      newjoin_Question19: ['', Validators.required],
 
 
       fb_name: ['', Validators.required],
       fb_empID: ['', Validators.required],
-      fb_mail: ['', Validators.required],
-      fb_phone: ['', Validators.required],
-      suggestionShare: ['', Validators.required]
+      fb_doj: ['', Validators.required],
+      fb_dept: ['', Validators.required],
+      fb_grade: ['', Validators.required]
     });
 
     this.images = [
@@ -118,17 +131,27 @@ export class FeedbackComponent implements OnInit {
       {
         rating: 4,
         icon: "",
-        label: "Excellent"
+        label: "Strongly Agree"
       },
       {
         rating: 3,
         icon: "",
-        label: "Good"
+        label: "Agree"
       },
       {
         rating: 2,
         icon: "",
-        label: "Fair"
+        label: "Neither Agree nor Disagree"
+      },
+      {
+        rating: 1,
+        icon: "",
+        label: "Disagree"
+      },
+      {
+        rating: 0,
+        icon: "",
+        label: "Strongly Disagree"
       }
     ]
 
@@ -175,6 +198,12 @@ export class FeedbackComponent implements OnInit {
         break;
       case 'hr':
         this.service.feedbackPost('/feedback/HRCreate', this.feedbackForm['value']).subscribe(result => {
+          console.log(result);
+          this.router.navigate(['/ThankYou']);
+        })
+        break;
+      case 'newJoining':
+        this.service.feedbackPost('/feedback/NewJoining', this.feedbackForm['value']).subscribe(result => {
           console.log(result);
           this.router.navigate(['/ThankYou']);
         })

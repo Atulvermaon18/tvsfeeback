@@ -1,6 +1,21 @@
-<div [ngStyle]="{'background-image': 'url(' + selectedImage + ')'}">
+<div>
+  <br>
+  <div class="container">
+    <div class="col-md-12">
+      <div style="font-size:20px;">
+        <div>Dear colleague,</div>
+        <br>
+        It's 3 months since you joined TVSNext. We hope you have had the opportunity to settle down without much
+        difficulty and are now inducted into the regular stream of activities. To help us assess the effectiveness of
+        our current processes, policies, culture & environment we request you to complete this feedback form. All
+        Information provided by you shall be kept confidential and put to use as appropriate.
+      </div>
+
+    </div>
+  </div>
   <div class="container">
     <div class="row" style="margin-top:50px;">
+
 
       <form [formGroup]="feedbackForm">
 
@@ -12,22 +27,26 @@
             </div>
 
           </div>
-          <div class="panel-body" *ngFor="let q of question.questions; let i= index" (click)="changeImage(j)">
-            <span class="ques">{{q.ques}}</span>
-            <mat-radio-group formControlName="{{q.feedBackFor}}" *ngIf="!q.options">
-              <mat-radio-button class="m30" *ngFor="let option of options" value="{{option.rating}}">{{option.label}}
-              </mat-radio-button>
-            </mat-radio-group>
-            <mat-radio-group formControlName="{{q.feedBackFor}}" *ngIf="q.options">
-              <mat-radio-button class="m30" *ngFor="let option of q.options" value="{{option.rating}}">{{option.label}}
-              </mat-radio-button>
-            </mat-radio-group>
-            <img src="assets/img/{{feedbackForm['value'][q.feedBackFor]}}.png" style="width:30px;margin-left:50px;"
-              *ngIf="feedbackForm['value'][q.feedBackFor]">
+          <div class="panel-body" *ngFor="let q of question.questions; let i= index">
+            <span class="ques">{{q.ques}}</span><br>
+            <div [ngSwitch]="q.type">
+              <mat-form-field class="m30" style="width:80%;" *ngSwitchCase="'Text'">
+                <textarea matInput placeholder="Additional comments" formControlName="{{q.feedBackFor}}"></textarea>
+              </mat-form-field>
+              <mat-radio-group formControlName="{{q.feedBackFor}}" *ngSwitchCase="'Radio'">
+                <mat-radio-button class="m30" *ngFor="let option of options" value="{{option.rating}}">
+                  {{option.label}}
+                </mat-radio-button>
+              </mat-radio-group>
+              <img src="assets/img/{{feedbackForm['value'][q.feedBackFor]}}.png" style="width:30px;margin-left:50px;"
+                *ngIf="feedbackForm['value'][q.feedBackFor]">
+            </div>
+
+
           </div>
         </div>
 
-        <mat-card *ngIf="questions.length">
+        <mat-card *ngIf="questions.length" style="border:1px solid #f6931e;">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Employee Feedback</mat-card-title>
@@ -42,22 +61,22 @@
             </mat-form-field>
 
             <mat-form-field style="margin-left: 25px;">
-              <input matInput placeholder="Mobile" formControlName="fb_phone" required>
+              <input matInput placeholder="Department" formControlName="fb_dept" required>
             </mat-form-field>
 
             <mat-form-field style="margin-left: 25px;">
-              <input matInput placeholder="Email" formControlName="fb_mail" required>
+              <input matInput placeholder="Grade" formControlName="fb_grade" required>
             </mat-form-field>
 
-            <mat-form-field style="width:100%;">
-              <textarea matInput placeholder="Additional comments" formControlName="suggestionShare"></textarea>
+            <mat-form-field style="margin-left: 25px;">
+              <input matInput [matDatepicker]="picker" placeholder="Date of Joining" formControlName="fb_doj">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
           </mat-card-content>
-          <mat-card-actions>
-            <button mat-raised-button color="primary" (click)="submit()">
-              Submit
-            </button>
-          </mat-card-actions>
+          <button mat-raised-button color="primary" (click)="submit()">
+            Submit
+          </button>
         </mat-card><br>
 
       </form>

@@ -32,7 +32,7 @@ export class UserDetailsComponent implements OnInit {
   display: any = {
     accordian: {}
   };
-  rating = { 2: 'Fair', 3: 'Good', 4: 'Excellent' };
+  rating = { 0: 'Strongly Disagree', 1: 'Disagree', 2: 'Neither Agree nor Disagree', 3: 'Agree', 4: 'Strongly Agree' };
 
   displayFormat(data) {
 
@@ -80,6 +80,16 @@ export class UserDetailsComponent implements OnInit {
     );
     popupWin.document.close();
 
+  }
+
+  checkNumberOrString(type) {
+    type = +type;
+    if (isNaN(type)) {
+      console.log(type)
+      return this.rating[type]
+    } else {
+      return type
+    }
   }
 
 

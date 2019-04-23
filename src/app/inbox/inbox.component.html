@@ -1,89 +1,78 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 row L2Black poppins-med-18" style="margin-top:25px; margin-bottom: 10px;">
-      <div class="col-md-2">
-        <h3>Survey Filter</h3>
-      </div>
-      <div class="col-md-2">
-        <div class="searchContainer poppins-reg-15">
-          <input class="searchBox" type="search" matInput (keyup)="applyFilter($event.target.value)"
-            placeholder="search" name="search">
-        </div>
-      </div>
+<div class="row" style="margin-top:25px; margin-bottom: 10px;">
 
-      <div class="col-md-8 text-right">
-
-        <mat-form-field>
-          <mat-label>Filter by Department</mat-label>
-          <mat-select (selectionChange)="applyFilter($event.value)">
-            <mat-option value="">
-              All
-            </mat-option>
-            <mat-option *ngFor="let dept of departments" [value]="dept.value">
-              {{dept.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-
-        <mat-form-field style="width: 200px; margin: 0px 15px;">
-          <input matInput [matDatepicker]="picker1" placeholder="Filter With Date" (dateChange)="onDateFrom($event)"
-            [(ngModel)]="feedback.fromdate">
-          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-          <mat-datepicker #picker1></mat-datepicker>
-        </mat-form-field>
-
-        <!-- <mat-form-field style="width: 200px; margin: 0px 15px;">
-          <input matInput [matDatepicker]="picker3" placeholder="End Date" [(ngModel)]="feedback.enddate">
-          <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-          <mat-datepicker #picker3></mat-datepicker>
-        </mat-form-field> -->
-
-        <img class="IconsWithBgWhite cur-pointer" (click)="print('quotesGrid')" src="assets/img/Icons/printer.png">
-        <img class="IconsWithBgWhite cur-pointer" [matMenuTriggerFor]="menu" src="assets/img/Icons/more.png">
-        <mat-menu #menu="matMenu">
-          <div class="checkbox-menu">
-            <p>Please pick the columns to be shown in the table </p>
-            <div class="row" (keydown.tab)="$event.stopPropagation()">
-              <div class="col-md-6" *ngFor="let col of columnsToDisplay">
-                <mat-checkbox [(ngModel)]="col.isChecked" [disabled]="col.isDisabled"
-                  (change)="onChangeCategory($event, col)">{{col.label.toUpperCase()}}</mat-checkbox>
-                <div style="border: 1px dashed #ccc;"></div>
-              </div>
-            </div>
-          </div>
-        </mat-menu>
-      </div>
+  <div class="col-md-5">
+    <div class="searchContainer poppins-reg-15">
+      <input class="searchBox" type="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="search"
+        name="search">
     </div>
   </div>
 
+  <div class="col-md-7">
 
-  <mat-card>
+    <mat-form-field>
+      <mat-label>Filter by Department</mat-label>
+      <mat-select (selectionChange)="applyFilter($event.value)">
+        <mat-option value="">
+          All
+        </mat-option>
+        <mat-option *ngFor="let dept of departments" [value]="dept.value">
+          {{dept.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field style="width: 200px; margin: 0px 15px;">
+      <input matInput [matDatepicker]="picker1" placeholder="Filter With Date" (dateChange)="onDateFrom($event)"
+        [(ngModel)]="feedback.fromdate">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <img class="IconsWithBgWhite cur-pointer" (click)="print('quotesGrid')" src="assets/img/Icons/printer.png">
+    <img class="IconsWithBgWhite cur-pointer" [matMenuTriggerFor]="menu" src="assets/img/Icons/more.png">
+    <mat-menu #menu="matMenu">
+      <div class="checkbox-menu">
+        <p>Please pick the columns to be shown in the table </p>
+        <div class="row" (keydown.tab)="$event.stopPropagation()">
+          <div class="col-md-6" *ngFor="let col of columnsToDisplay">
+            <mat-checkbox [(ngModel)]="col.isChecked" [disabled]="col.isDisabled"
+              (change)="onChangeCategory($event, col)">{{col.label.toUpperCase()}}</mat-checkbox>
+            <div style="border: 1px dashed #ccc;"></div>
+          </div>
+        </div>
+      </div>
+    </mat-menu>
+  </div>
 
 
-    <table mat-table [dataSource]="dataSource" matSort id="quotesGrid">
-
-      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header class="t-header poppins-med-14">
-          {{column.toUpperCase()}} </th>
-        <td mat-cell *matCellDef="let element;">
-          <span class="poppins-reg-15 hyperlink" *ngIf="column=='Employee Name'"
-            (click)="openLogin(element,column)">{{element[column] }}</span>
-          <span class="poppins-reg-15"
-            *ngIf="column!=='submit date' && column!=='Employee Name' ">{{element[column]  | uppercase}}
-          </span>
-          <span class="poppins-reg-15" *ngIf="column==='submit date'">
-
-            {{element[column] | date:'MMM d, y, h:mm:ss a'}}</span>
-
-        </td>
-      </ng-container>
-
-      <tr class="poppins-reg-15 opa8" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr class="poppins-reg-15 opa8" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-    <mat-paginator class="poppins-reg-14" [pageSizeOptions]="[10, 20, 30, 40, 50, 60, 70, 80, 100]"
-      showFirstLastButtons>
-    </mat-paginator>
-  </mat-card>
-  <br>
 </div>
+<mat-card>
+
+  <table mat-table [dataSource]="dataSource" matSort id="quotesGrid">
+
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="t-header poppins-med-14">
+        {{column.toUpperCase()}} </th>
+      <td mat-cell *matCellDef="let element;">
+        <span class="poppins-reg-15 hyperlink" *ngIf="column=='Employee Name'"
+          (click)="openLogin(element,column)">{{element[column] }}</span>
+        <span class="poppins-reg-15"
+          *ngIf="column!=='submit date' && column!=='Employee Name' ">{{element[column]  | uppercase}}
+        </span>
+        <span class="poppins-reg-15" *ngIf="column==='submit date'">
+
+          {{element[column] | date:'MMM d, y, h:mm:ss a'}}</span>
+
+      </td>
+    </ng-container>
+
+    <tr class="poppins-reg-15 opa8" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="poppins-reg-15 opa8" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator class="poppins-reg-14" [pageSizeOptions]="[10, 20, 30, 40, 50, 60, 70, 80, 100]" showFirstLastButtons>
+  </mat-paginator>
+</mat-card>
+
+
+
+<br>

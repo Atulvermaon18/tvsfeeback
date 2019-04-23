@@ -10,7 +10,7 @@
             </i>
             {{feedback.name}}</h4>
           <button class="pull-right" style="margin-right:20px" mat-raised-button color="primary"
-            (click)="selectQuest(feedback.id)">Give Feedback</button>
+            (click)="selectQuest(feedback.id)" [disabled]="!feedback.isEnabled">Give Feedback</button>
         </mat-card-content>
       </mat-card>
     </div>

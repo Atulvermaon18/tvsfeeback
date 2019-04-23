@@ -14,34 +14,45 @@ export class LoginComponent implements OnInit {
 
 
   feedbackItem = [{
+    "name": "New Joiners",
+    "id": "newJoining",
+    "icon": "important_devices",
+    "isEnabled": true
+  }, {
     "name": "IT Department",
     "id": "it",
-    "icon": "important_devices"
+    "icon": "important_devices",
+    "isEnabled": false
   },
   {
     "name": "HR Department",
     "id": "hr",
-    "icon": "assignment_ind"
+    "icon": "assignment_ind",
+    "isEnabled": false
   },
   {
     "name": "Office Environment",
     "id": "office",
-    "icon": "local_florist"
+    "icon": "local_florist",
+    "isEnabled": false
   },
   {
     "name": "Meeting Room Availability",
     "id": "mr",
-    "icon": "video_call"
+    "icon": "video_call",
+    "isEnabled": false
   },
   {
     "name": "Cafeteria",
     "id": "cafe",
-    "icon": "restaurant_menu"
+    "icon": "restaurant_menu",
+    "isEnabled": false
   },
   {
     "name": "Late Night Travel For Ladies",
     "id": "travel",
-    "icon": "departure_board"
+    "icon": "departure_board",
+    "isEnabled": false
   }]
 
   constructor(private service: ApiService, private router: Router, public dialog: MatDialog) { }

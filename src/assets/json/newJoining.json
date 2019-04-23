@@ -1,0 +1,127 @@
+{
+    "data": [
+        {
+            "topic": "How would you rate your “settling down” process at TVSNext?",
+            "ques": "How would you rate your “settling down” process at TVSNext?",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "HR continues to provide support in addressing my queries / needs from time to time",
+                    "feedBackFor": "newjoin_Question1",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "HR Representatives are always available to provide clarifications on policies and procedures",
+                    "feedBackFor": "newjoin_Question2",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "HR has helped me have a smooth and seamless transition into TVSNext",
+                    "feedBackFor": "newjoin_Question3",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "Do you have any suggestions to improve the HR interface with new joinees?",
+                    "feedBackFor": "newjoin_Question4",
+                    "type": "Text"
+                }
+            ]
+        },
+        {
+            "topic": "How would you rate your induction into your department / project?",
+            "ques": "How would you rate your induction into your department / project?",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "My roles and responsibilities have been made very clear to me",
+                    "feedBackFor": "newjoin_Question5",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "New joinees are inducted properly inducted into the team",
+                    "feedBackFor": "newjoin_Question6",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "My job is more or less what I envisioned it to be prior to joining",
+                    "feedBackFor": "newjoin_Question7",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "My skills are being utilized fully and appropriately",
+                    "feedBackFor": "newjoin_Question8",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "Do you have any suggestions to improve orientation to new joinees at the unit level?",
+                    "feedBackFor": "newjoin_Question9",
+                    "type": "Text"
+                }
+            ]
+        },
+        {
+            "topic": "How would you rate the effectiveness of the Buddy Program?",
+            "ques": "How would you rate the effectiveness of the Buddy Program?",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "I can still approach my buddy for any support",
+                    "feedBackFor": "newjoin_Question10",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "I was able to understand the organization and department better through my buddy",
+                    "feedBackFor": "newjoin_Question11",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "The Buddy Program is a well thought out process and should be continued for the benefit of all new joinees",
+                    "feedBackFor": "newjoin_Question12",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "Do you have any suggestions to improve the current buddy program?",
+                    "feedBackFor": "newjoin_Question13",
+                    "type": "Text"
+                }
+            ]
+        },
+        {
+            "topic": "How would you rate the culture and environment at TVSNext?",
+            "ques": "How would you rate the culture and environment at TVSNext?",
+            "icon": "video.jpg",
+            "questions": [
+                {
+                    "ques": "TVSNext practices the open culture policy that it professes to have",
+                    "feedBackFor": "newjoin_Question14",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "The work environment is very professional and friendly",
+                    "feedBackFor": "newjoin_Question15",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "The Senior Management is very approachable",
+                    "feedBackFor": "newjoin_Question16",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "The communication channels are wide and open. There are sufficient forums to voice one’s opinion",
+                    "feedBackFor": "newjoin_Question17",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "The organization has met my expectations in terms of utilizing my capabilities (contribution to organizational initiatives)",
+                    "feedBackFor": "newjoin_Question18",
+                    "type": "Radio"
+                },
+                {
+                    "ques": "Do you have any suggestions to positively impact the culture and environment at TVSNext?",
+                    "feedBackFor": "newjoin_Question19",
+                    "type": "Text"
+                }
+            ]
+        }
+    ]
+}

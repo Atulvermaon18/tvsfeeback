@@ -199,6 +199,7 @@ export class DashboardComponent implements OnInit {
   }
 
   doFilter(req, by) {
+    // return
     req.type = by;
     this.service.getInputs('/feedback/ITRead').subscribe((result: any) => {
       this.feedback.empFeedback = result.data.length;

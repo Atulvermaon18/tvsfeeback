@@ -5,14 +5,14 @@ body { margin: 0;font-family: 'Zilla Slab', serif; }
 
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple{
-    background-color: #bac752;
+    background-color: #f79e35;
 }
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
-    border-color: #bac752;
+    border-color: #f79e35;
 }
 
 .panel-info {
-    border-color: #bac752;
+    border-color:#f79e35;
 }
 
 /* width */
