@@ -1,47 +1,44 @@
-<div style="margin-top:10px;">
-
-  <br>
-  <h4 style="margin-left:40px;">Rating is from {{feedback.empFeedback}} Employee</h4>
-  <div>
-    <mat-card class="col-md-12">
-      <div class="text-right">
-        <form [formGroup]="compareMonths">
-          <!-- <DateRangePicker fromDate={tate.fromDate} date toDate={tate.toDate} Date onChange={handleDateRangeChange}
+<!-- <h4 style="margin-left:40px;"></h4> -->
+<div>
+  <mat-card class="col-md-12">
+    <div class="card-body">
+      <h3 class="card-title">Rating is from {{feedback.empFeedback}} Employee</h3>
+    </div>
+    <div class="text-right">
+      <form [formGroup]="compareMonths">
+        <!-- <DateRangePicker fromDate={tate.fromDate} date toDate={tate.toDate} Date onChange={handleDateRangeChange}
             closeDialogOnSelection></DateRangePicker> -->
-          <mat-slide-toggle style="margin-right:10px;font-weight: normal;" (click)="dateRangeHandler()">
-            Use Date Range
-          </mat-slide-toggle>
+        <mat-slide-toggle style="margin-right:10px;font-weight: normal;" (click)="dateRangeHandler()">
+          Use Date Range
+        </mat-slide-toggle>
 
 
 
-          Compare
-          <mat-form-field style="width: 200px; margin: 0px 15px;" *ngIf="!useDateRange">
-            <input matInput [matDatepicker]="picker1" formControlName="month1" placeholder="Start Date">
-            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-            <mat-datepicker #picker1></mat-datepicker>
-          </mat-form-field>
-          <ngx-mat-drp *ngIf="useDateRange" style="display:inline-block;"
-            (selectedDateRangeChanged)="updateRangeStart($event,'set1')" [options]="options1" #dateRangePicker>
-          </ngx-mat-drp>
-          With
-          <mat-form-field style="width: 200px; margin: 0px 15px;" *ngIf="!useDateRange">
-            <input matInput [matDatepicker]="picker2" formControlName="month2" placeholder="End Date">
-            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-            <mat-datepicker #picker2></mat-datepicker>
-          </mat-form-field>
-          <ngx-mat-drp *ngIf="useDateRange" style="display:inline-block;"
-            (selectedDateRangeChanged)="updateRangeEnd($event,'set2')" [options]="options2" #dateRangePicker>
-          </ngx-mat-drp>
+        Compare
+        <mat-form-field style="width: 200px; margin: 0px 15px;" *ngIf="!useDateRange">
+          <input matInput [matDatepicker]="picker1" formControlName="month1" placeholder="Start Date">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <ngx-mat-drp *ngIf="useDateRange" style="display:inline-block;"
+          (selectedDateRangeChanged)="updateRangeStart($event,'set1')" [options]="options1" #dateRangePicker>
+        </ngx-mat-drp>
+        With
+        <mat-form-field style="width: 200px; margin: 0px 15px;" *ngIf="!useDateRange">
+          <input matInput [matDatepicker]="picker2" formControlName="month2" placeholder="End Date">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <ngx-mat-drp *ngIf="useDateRange" style="display:inline-block;"
+          (selectedDateRangeChanged)="updateRangeEnd($event,'set2')" [options]="options2" #dateRangePicker>
+        </ngx-mat-drp>
 
-          <button mat-raised-button color="accent" (click)="doCompareMonth()"> Compare </button>
-        </form>
-      </div>
-      <div [chart]="bar"></div>
-    </mat-card>
-  </div>
-  <br>
-
-  <br>
-
-
+        <button mat-raised-button color="accent" (click)="doCompareMonth()"> Compare </button>
+      </form>
+    </div>
+    <div [chart]="bar"></div>
+  </mat-card>
 </div>
+<br>
+
+<br>

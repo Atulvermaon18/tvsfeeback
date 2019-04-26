@@ -338,13 +338,7 @@ export class DashboardComponent implements OnInit {
 
       }, {
         name: 'Office Environment',
-        data: [84]
-
-      },
-
-      {
-        name: 'Travel For Ladies',
-        data: [50]
+        data: [22]
 
       }]
     });

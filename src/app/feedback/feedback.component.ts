@@ -117,6 +117,7 @@ export class FeedbackComponent implements OnInit {
       fb_empID: ['', Validators.required],
       fb_doj: ['', Validators.required],
       fb_dept: ['', Validators.required],
+      fb_mail: ['', Validators.required],
       fb_grade: ['', Validators.required]
     });
 

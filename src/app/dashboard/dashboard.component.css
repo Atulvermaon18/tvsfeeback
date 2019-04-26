@@ -1,3 +1,13 @@
 ::ng-deep .mat-slide-toggle-content{
     font-weight: normal;
 }
+.dashboard-number-box{
+    background: #90ed7d;
+    height: 120px;
+    width: 170px;
+    display: inline-block;
+    
+}
+.m-left{
+    margin-left: 40px;
+}

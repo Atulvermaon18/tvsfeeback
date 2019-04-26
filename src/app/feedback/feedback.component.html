@@ -53,28 +53,54 @@
             <mat-card-title>Employee Feedback</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <mat-form-field>
-              <input matInput placeholder="Name" formControlName="fb_name" required>
-            </mat-form-field>
+            <div class="row">
+              <div class="col-md-4">
+                <mat-form-field>
+                  <input matInput placeholder="Name" formControlName="fb_name" required>
+                </mat-form-field>
 
-            <mat-form-field style="margin-left: 25px;">
-              <input matInput placeholder="Emp ID" formControlName="fb_empID" required>
-            </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field>
+                  <input matInput placeholder="Emp ID" formControlName="fb_empID" required>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
 
-            <mat-form-field style="margin-left: 25px;">
-              <input matInput placeholder="Department" formControlName="fb_dept" required>
-            </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Department" formControlName="fb_dept" required>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <mat-form-field>
+                  <input matInput placeholder="Grade" formControlName="fb_grade" required>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
 
-            <mat-form-field style="margin-left: 25px;">
-              <input matInput placeholder="Grade" formControlName="fb_grade" required>
-            </mat-form-field>
+                <mat-form-field>
+                  <input matInput placeholder="Email" formControlName="fb_mail" required>
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" [max]="todaysDate" placeholder="Date of Joining"
+                    formControlName="fb_doj">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
 
-            <mat-form-field style="margin-left: 25px;">
-              <input matInput [matDatepicker]="picker" [max]="todaysDate" placeholder="Date of Joining"
-                formControlName="fb_doj">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+
+
+
+
+
+
+
           </mat-card-content>
           <button mat-raised-button color="primary" [disabled]="feedbackForm.invalid" (click)="submit()">
             Submit
