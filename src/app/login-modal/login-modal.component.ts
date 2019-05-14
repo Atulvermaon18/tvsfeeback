@@ -37,6 +37,7 @@ export class LoginModalComponent implements OnInit {
         localStorage.setItem('User', result.firstName)
         localStorage.setItem('token', result.token);
         localStorage.setItem('emails', result.emails);
+        localStorage.setItem('employees', result.participants);
         this.displayUser.display()
         this.dialogRef.close(result.token);
 
