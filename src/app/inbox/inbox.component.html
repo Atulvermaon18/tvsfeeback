@@ -5,9 +5,12 @@
       <input class="searchBox" type="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="search"
         name="search">
     </div>
+    <span style="font-size: 20px;">Total {{tableData.length}} Employee's Feedback </span>
   </div>
 
-  <div class="col-md-7">
+
+  <div class="col-md-6">
+
 
     <mat-form-field>
       <mat-label>Filter by Department</mat-label>

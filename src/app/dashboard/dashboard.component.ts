@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit {
   }
   state = {};
   bar: any = new Chart();
+  bar1: any = new Chart();
   useDateRange: boolean = false;
   months: any = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -107,8 +108,7 @@ export class DashboardComponent implements OnInit {
       calendarOverlayConfig: {
         shouldCloseOnBackdropClick: false
       },
-      // cancelLabel: "Cancel",
-      // excludeWeekends:true,
+
       fromMinMax: { fromDate: fromMin, toDate: fromMax },
       toMinMax: { fromDate: toMin, toDate: toMax }
     };
@@ -120,10 +120,6 @@ export class DashboardComponent implements OnInit {
       calendarOverlayConfig: {
         shouldCloseOnBackdropClick: false
       },
-      // cancelLabel: "Cancel",
-      // excludeWeekends:true,
-      // fromMinMax: { fromDate: fromMin, toDate: fromMax },
-      // toMinMax: { fromDate: toMin, toDate: toMax }
     };
 
     this.doCompareMonth();
@@ -210,11 +206,116 @@ export class DashboardComponent implements OnInit {
         newjoine: []
       }
       if (result.data.length) {
-        this.barChartCalculation(result.data);
+        this.barChartCalculation(result.data);;
+        this.positiveNegative(result.data)
       } else {
         this.setZeroForMonths();
       }
     })
+  }
+
+  positiveNegative(result) {
+    console.log(result);
+
+    let options = {
+      'sg': 0,
+      'agr': 0,
+      'nand': 0,
+      'dgr': 0,
+      'sd': 0
+    }
+
+    for (let i = 0; i < result.length; i++) {
+      Object.keys(result[i]).forEach(function (type) {
+        console.log()
+        let dept = type.substr(0, type.indexOf('_'))
+
+        if (!isNaN(+result[i][type])) {
+          switch (result[i][type]) {
+            case '4':
+              options.sg++;
+              break;
+            case '3':
+              options.agr++;
+              break;
+            case '2':
+              options.nand++;
+              break;
+            case '1':
+              options.dgr++;
+              break;
+            case '0':
+              options.sd++;
+              break;
+          }
+
+        }
+
+
+
+
+      })
+
+    }
+
+    this.bar1 = new Chart({
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: 'Positive and Negative Rating Per Question'
+      },
+      subtitle: {
+        text: 'Source: Smart Survey'
+      },
+      xAxis: {
+        categories: ['New Employee Ratings'],
+        crosshair: true
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Rating (4)'
+        }
+      },
+      tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [{
+        name: 'Strongly Agree',
+        data: [options.sg]
+
+      }, {
+        name: 'Agree',
+        data: [options.agr]
+
+      },
+      {
+        name: 'Neither Agree nor Disagree',
+        data: [options.nand]
+
+      }, {
+        name: 'Disagree',
+        data: [options.dgr]
+
+      },
+      {
+        name: 'Strongly Disagree',
+        data: [options.sd]
+
+      }]
+    });
   }
 
   setZeroForMonths() {
@@ -278,8 +379,6 @@ export class DashboardComponent implements OnInit {
 
   structureMonthlyGraphs() {
 
-
-
     this.bar = new Chart({
       chart: {
         type: 'column'
@@ -316,29 +415,16 @@ export class DashboardComponent implements OnInit {
       },
       series: [{
         name: 'IT',
-        data: this.overAllRatingObj.it
+        data: [11]
 
       }, {
         name: 'HR',
-        data: this.overAllRatingObj.hr
+        data: [11]
 
       },
       {
         name: 'New joinee',
         data: this.overAllRatingObj.newjoine
-
-      },
-      {
-        name: 'Cafe',
-        data: [55]
-
-      }, {
-        name: 'Meeting Room Avaliblity',
-        data: [34]
-
-      }, {
-        name: 'Office Environment',
-        data: [22]
 
       }]
     });
