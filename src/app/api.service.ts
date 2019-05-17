@@ -44,6 +44,12 @@ export class ApiService {
   }
 
 
+  exportExcel(serviceAPI) {
+    let url = this.devUrl + serviceAPI;
+    window.open(url);
+  }
+
+
 
 
 }

@@ -58,6 +58,10 @@ export class InboxComponent implements OnInit {
     }
   }
 
+  downloadExcel() {
+    this.service.exportExcel('/feedback/export');
+  }
+
 
 
   ngOnInit() {
