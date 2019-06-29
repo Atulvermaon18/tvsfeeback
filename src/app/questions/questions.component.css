@@ -1,0 +1,8 @@
+  .full-width {
+      width:100%
+  }
+
+  .right-align {
+  position: absolute;
+  right: 0;
+}

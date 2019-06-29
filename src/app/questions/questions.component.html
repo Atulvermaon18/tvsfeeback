@@ -1,0 +1,48 @@
+<div class="container" style="min-height:600px">
+  <div class="row">
+    <div class="col-md-12 row L2Black poppins-med-18" style="margin-top:25px; margin-bottom: 10px;">
+      <div class="col-md-2">
+        <h3>Questions</h3>
+      </div>
+      <div class="col-md-8 text-right">
+        <mat-form-field>
+          <mat-label>Filter by Department</mat-label>
+          <mat-select (selectionChange)="applyFilter($event.value)">
+            <mat-option *ngFor="let dept of departments" [value]="dept.value">
+              {{dept.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]="questionForm" (ngSubmit)="saveQuestion(questionForm)">
+    <div class="row L2Black poppins-med-18" *ngFor="let number of questions;let i = index;">
+      <div class="col-md-8" *ngFor="let ques of questionsField;let q = index;">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="{{ques.fieldName}}" [formControlName]="ques.key+(i+1)">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row L2Black poppins-med-18">
+      <div class="col-md-2">
+        <button mat-raised-button type="button" color="primary" [disabled]="questionType ==''" (click)="addQuestion()">
+          Add Question
+        </button>
+      </div>
+      <!-- <div class="col-md-2">
+        <button mat-raised-button type="button" class="text-center" color="primary" [disabled]="questionType ==''"
+          (click)="readQuestion()">
+          View Question
+        </button>
+      </div> -->
+      <div class="col-md-2">
+        <div>
+          <button type="submit" mat-raised-button color="primary" [disabled]="questionType ==''" class="right-align">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
