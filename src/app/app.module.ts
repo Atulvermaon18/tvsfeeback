@@ -34,6 +34,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
     MailComponent,
     SettingsComponent,
     ThankyouComponent,
+    QuestionsComponent,
   ],
   imports: [
     BrowserModule,

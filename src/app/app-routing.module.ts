@@ -8,6 +8,7 @@ import { InboxComponent } from './inbox/inbox.component';
 import { MailComponent } from './mail/mail.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,8 @@ const routes: Routes = [
       { path: 'Dashboard', component: DashboardComponent },
       { path: 'Inbox', component: InboxComponent },
       { path: 'Mail', component: MailComponent },
-      { path: 'Settings', component: SettingsComponent }
+      { path: 'Settings', component: SettingsComponent },
+      { path: 'Questions', component: QuestionsComponent }
     ]
   }]
 

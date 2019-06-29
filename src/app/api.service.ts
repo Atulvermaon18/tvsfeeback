@@ -43,6 +43,13 @@ export class ApiService {
     return this.http.get(url, { headers: headers });
   }
 
+  patchInputs(serviceAPI, params): Observable<any> {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': localStorage.token });
+    let url = this.devUrl + serviceAPI;
+    return this.http.patch(url, params, { headers: headers })
+  }
+
+
 
   exportExcel(serviceAPI) {
     let url = this.devUrl + serviceAPI;

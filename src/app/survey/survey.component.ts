@@ -38,6 +38,11 @@ export class SurveyComponent implements OnInit {
       icon: "mail"
     },
     {
+      name: 'Questions',
+      updated: 'Add',
+      icon: "settings"
+    },
+    {
       name: 'Settings',
       updated: 'Revert',
       icon: "settings"
