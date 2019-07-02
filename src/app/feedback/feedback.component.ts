@@ -15,6 +15,7 @@ export class FeedbackComponent implements OnInit {
 
   formData: FormData[];
   questions: any = [];
+  showForm: boolean = false;
   options: any = [];
   images = [];
   selectedImage = "assets/img/video.jpg";
@@ -25,7 +26,7 @@ export class FeedbackComponent implements OnInit {
 
     this.feedbackForm = new FormGroup({});
 
-    const formGroup = {};
+
 
     this.options = [
       {
@@ -57,11 +58,18 @@ export class FeedbackComponent implements OnInit {
 
     this.questions = [];
 
+
+
+
+  }
+
+  ngAfterContentInit() {
+    const formGroup = {};
+
     if (this.service.questionType) {
 
       this.service.getInputs("/feedback/viewQuestions").subscribe((result: any) => {
-        // this.service.getLocalData("questions").subscribe((result: any) => {
-
+        this.showForm = true;
         console.log(result);
         this.formData = result.data;
         this.formData.forEach((topic, i) => {
@@ -77,7 +85,6 @@ export class FeedbackComponent implements OnInit {
         formGroup['fb_grade'] = new FormControl('');
         this.feedbackForm = new FormGroup(formGroup);
       })
-
     } else {
       this.router.navigate(['/Login']);
     }

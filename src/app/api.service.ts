@@ -38,7 +38,7 @@ export class ApiService {
   }
 
   getInputs(serviceAPI): Observable<any> {
-    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': localStorage.token });
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     let url = this.devUrl + serviceAPI;
     return this.http.get(url, { headers: headers });
   }

@@ -14,12 +14,10 @@
     </mat-card>
   </div>
   <div class="container">
-    <div class="row" style="margin-top:50px;">
+    <div class="row" style="margin-top:50px;" *ngIf="showForm">
 
 
       <form [formGroup]="feedbackForm">
-
-
 
         <div class="panel panel-info " *ngFor="let question of formData; let j= index" style="opacity: 0.9;">
           <div class="panel-heading header gradiant-header">
@@ -49,7 +47,7 @@
           </div>
         </div>
 
-        <mat-card *ngIf="formData.length" style="border:1px solid #f6931e;">
+        <mat-card style="border:1px solid #f6931e;">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Employee Feedback</mat-card-title>
