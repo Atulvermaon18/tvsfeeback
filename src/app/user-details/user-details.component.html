@@ -14,9 +14,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let question of data | keyvalue">
-      <td *ngIf="qsn[question.key]"> {{qsn[question.key]}}</td>
-      <td *ngIf="qsn[question.key]"> {{rating[question.value]?rating[question.value]:question.value}}</td>
+    <tr *ngFor="let question of qsn">
+      <td> {{question.question}}</td>
+      <td> {{data[question.controlName]}}</td>
     </tr>
   </tbody>
 </table>

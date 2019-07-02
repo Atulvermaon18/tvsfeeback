@@ -25,26 +25,26 @@ export class SurveyComponent implements OnInit {
   folders: any = [
     {
       name: 'Inbox',
-      updated: "Closer View",
+
       icon: "perm_contact_calendar"
     },
     {
       name: 'Dashboard',
-      updated: "Overall View",
+
       icon: "dashboard"
     }, {
       name: 'Mail',
-      updated: 'Revert',
+
       icon: "mail"
     },
     {
       name: 'Questions',
-      updated: 'Add',
-      icon: "settings"
+
+      icon: "Add"
     },
     {
       name: 'Settings',
-      updated: 'Revert',
+
       icon: "settings"
     }
   ];

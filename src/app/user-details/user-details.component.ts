@@ -13,18 +13,26 @@ import { ApiService } from '../api.service';
 export class UserDetailsComponent implements OnInit {
 
 
-  qsn: any = {};
+  qsn: any = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private formBuilder: FormBuilder, private service: ApiService, public dialogRef: MatDialogRef<UserDetailsComponent>) { }
 
 
   ngOnInit() {
 
-    this.displayFormat(this.data);
+    // this.displayFormat(this.data);
 
-    this.service.getLocalData('surveyQuestions').subscribe((result: any) => {
+    // this.service.getLocalData('surveyQuestions').subscribe((result: any) => {
+    this.service.getInputs("/feedback/viewQuestions").subscribe((result: any) => {
       console.log(result);
-      this.qsn = result;
+      // this.qsn = result;
+      for (let index = 0; index < result.data.length; index++) {
+        for (let j = 0; j < result.data[index].questions.length; j++) {
+          this.qsn.push({ "controlName": result.data[index].questions[j].controlName, "question": result.data[index].questions[j].ques })
+
+        }
+
+      }
     })
 
   }
@@ -34,21 +42,21 @@ export class UserDetailsComponent implements OnInit {
   };
   rating = { 0: 'Strongly Disagree', 1: 'Disagree', 2: 'Neither Agree nor Disagree', 3: 'Agree', 4: 'Strongly Agree' };
 
-  displayFormat(data) {
+  // displayFormat(data) {
 
-    this.display.accordian;
+  //   this.display.accordian;
 
-    for (var key in data) {
-      if (data.hasOwnProperty(key) && typeof (data[key]) === 'object') {
-        if (data[key].overAll !== 'NA') {
+  //   for (var key in data) {
+  //     if (data.hasOwnProperty(key)) {
+  //       if (data[key].overAll !== 'NA') {
 
-          this.display.accordian[key] = data[key];
-          console.log(this.display.accordian);
-        }
+  //         this.display.accordian[key] = data[key];
+  //         console.log(this.display.accordian);
+  //       }
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
   printReport(id) {
     console.log(id)

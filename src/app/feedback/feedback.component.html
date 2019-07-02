@@ -19,26 +19,28 @@
 
       <form [formGroup]="feedbackForm">
 
-        <div class="panel panel-info " *ngFor="let question of questions; let j= index" style="opacity: 0.9;">
+
+
+        <div class="panel panel-info " *ngFor="let question of formData; let j= index" style="opacity: 0.9;">
           <div class="panel-heading header gradiant-header">
             <div mat-card-avatar class="example-header-image"
               [ngStyle]="{'background-image':'url(assets/img/' + question.icon + ')'}">
-              <div class="title">{{question.topic}}</div>
+              <div class="title">{{question.brief}}</div>
             </div>
 
           </div>
           <div class="panel-body" *ngFor="let q of question.questions; let i= index">
             <span class="ques">{{q.ques}}</span><br>
-            <div [ngSwitch]="q.type">
-              <mat-form-field class="m30" style="width:80%;" *ngSwitchCase="'Text'">
-                <textarea matInput placeholder="Additional comments" formControlName="{{q.feedBackFor}}"></textarea>
+            <div [ngSwitch]="q.controlType">
+              <mat-form-field class="m30" style="width:80%;" *ngSwitchCase="'text'">
+                <textarea matInput placeholder="Additional comments" formControlName="{{q.controlName}}"></textarea>
               </mat-form-field>
-              <mat-radio-group formControlName="{{q.feedBackFor}}" *ngSwitchCase="'Radio'">
+              <mat-radio-group formControlName="{{q.controlName}}" *ngSwitchCase="'radio'">
                 <mat-radio-button class="m30" *ngFor="let option of options" value="{{option.rating}}">
                   {{option.label}}
                 </mat-radio-button>
-                <img src="assets/img/{{feedbackForm['value'][q.feedBackFor]}}.png" style="width:30px;margin-left:50px;"
-                  *ngIf="feedbackForm['value'][q.feedBackFor]">
+                <img src="assets/img/{{feedbackForm['value'][q.controlName]}}.png" style="width:30px;margin-left:50px;"
+                  *ngIf="feedbackForm['value'][q.controlName]">
               </mat-radio-group>
 
             </div>
@@ -47,7 +49,7 @@
           </div>
         </div>
 
-        <mat-card *ngIf="questions.length" style="border:1px solid #f6931e;">
+        <mat-card *ngIf="formData.length" style="border:1px solid #f6931e;">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Employee Feedback</mat-card-title>

@@ -1,0 +1,26 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "_id": "5d1afde2106d8c6564cef2c6",
+            "topic": "HR",
+            "brief": "How was the induction?",
+            "questions": [
+                {
+                    "_id": "5d1afde2106d8c6564cef2c8",
+                    "ques": "Was is helpful",
+                    "feedBackFor": "question1",
+                    "type": "text"
+                },
+                {
+                    "_id": "5d1afde2106d8c6564cef2c7",
+                    "ques": "Was is too long?",
+                    "feedBackFor": "question1",
+                    "type": "radio"
+                }
+            ],
+            "time": "2019-07-02T06:46:58.645Z",
+            "__v": 0
+        }
+    ]
+}

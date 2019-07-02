@@ -4,45 +4,41 @@
       <div class="col-md-2">
         <h3>Questions</h3>
       </div>
-      <div class="col-md-8 text-right">
-        <mat-form-field>
-          <mat-label>Filter by Department</mat-label>
-          <mat-select (selectionChange)="applyFilter($event.value)">
-            <mat-option *ngFor="let dept of departments" [value]="dept.value">
-              {{dept.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
     </div>
   </div>
   <form [formGroup]="questionForm" (ngSubmit)="saveQuestion(questionForm)">
-    <div class="row L2Black poppins-med-18" *ngFor="let number of questions;let i = index;">
-      <div class="col-md-8" *ngFor="let ques of questionsField;let q = index;">
-        <mat-form-field class="full-width">
-          <input matInput placeholder="{{ques.fieldName}}" [formControlName]="ques.key+(i+1)">
-        </mat-form-field>
-      </div>
-    </div>
     <div class="row L2Black poppins-med-18">
       <div class="col-md-2">
-        <button mat-raised-button type="button" color="primary" [disabled]="questionType ==''" (click)="addQuestion()">
-          Add Question
+        <button mat-raised-button type="button" color="primary" (click)="addTopic()">
+          Add Topic
         </button>
       </div>
-      <!-- <div class="col-md-2">
-        <button mat-raised-button type="button" class="text-center" color="primary" [disabled]="questionType ==''"
-          (click)="readQuestion()">
-          View Question
-        </button>
-      </div> -->
       <div class="col-md-2">
         <div>
-          <button type="submit" mat-raised-button color="primary" [disabled]="questionType ==''" class="right-align">
+          <button type="submit" mat-raised-button color="primary" class="right-align">
             Save
           </button>
         </div>
       </div>
+    </div><br>
+    <div class="row L2Black poppins-med-18" *ngFor="let number of topic;let i=index;">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Topic" [formControlName]="'topic'+ i">
+      </mat-form-field>
+      <div *ngFor="let ques of questions;let j=index;">
+        <div class="col-md-8 L2Black poppins-med-18">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="newjoin_Question{{j}}" [formControlName]="'question'+ j">
+          </mat-form-field>
+        </div>
+      </div>
+      <button mat-raised-button type="button" color="primary" (click)="addQuestion()">
+        Add Questions
+      </button>
+      <br>
     </div>
+
+
+
   </form>
 </div>

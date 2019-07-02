@@ -39,20 +39,6 @@ export class LoginComponent implements OnInit {
     "icon": "local_florist",
     "isEnabled": false,
     "background": '/assets/img/env.jpeg',
-  },
-  {
-    "name": "Meeting Room Availability",
-    "id": "mr",
-    "icon": "video_call",
-    "isEnabled": false,
-    "background": '/assets/img/meeting.jpg',
-  },
-  {
-    "name": "Cafeteria",
-    "id": "cafe",
-    "icon": "restaurant_menu",
-    "isEnabled": false,
-    "background": '/assets/img/cafe.jpg',
   }]
 
   constructor(private service: ApiService, private router: Router, public dialog: MatDialog) { }
